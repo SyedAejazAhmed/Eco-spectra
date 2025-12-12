@@ -742,7 +742,9 @@ Our research followed a systematic approach to identify the optimal detection me
 ## 👥 Collaborators
 
 • [Syed Aejaz Ahmed](https://github.com/SyedAejazAhmed) (Owner)
+
 • [Nowrin Begum R](https://github.com/NowrinbegumR) (Collaborator)
+
 • [Reya Josephine](https://github.com/Reyajosephine) (Collaborator)
 
 **🌞 Built for Sustainable Energy Research**
