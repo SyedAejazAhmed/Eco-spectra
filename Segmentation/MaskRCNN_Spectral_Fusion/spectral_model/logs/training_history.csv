@@ -1,1 +1,0 @@
-epoch,train_loss,loss_classifier,loss_box_reg,loss_mask,loss_objectness,loss_rpn_box_reg,val_avg_detections,learning_rate,timestamp
