@@ -1,0 +1,18 @@
+# Environment variables
+.env
+
+# Output directories
+images/
+*.png
+
+# Logs
+log.txt
+test_log.txt
+retry_log.txt
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python

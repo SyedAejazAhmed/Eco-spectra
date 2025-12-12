@@ -1,0 +1,33 @@
+# Core dependencies (CPU-compatible)
+# Install these first before SAM dependencies
+
+pandas>=2.0.0
+requests>=2.32.0
+python-dotenv>=1.0.0
+numpy>=1.24.0
+tqdm>=4.65.0
+
+# Image processing
+pillow>=10.0.0
+opencv-python>=4.8.0
+matplotlib>=3.7.0
+
+# Earth Engine / Geospatial
+earthengine-api
+shapely>=2.0.0
+geojson>=3.0.0
+
+# Scientific computing
+scipy>=1.11.0
+
+# Basic PyTorch (CPU version - for testing without GPU)
+# For GPU version, use requirements_cuda.txt first
+torch>=2.0.0
+torchvision>=0.15.0
+
+# Segment Anything Model
+segment-anything
+supervision 
+transformers
+git+https://github.com/luca-medeiros/lang-segment-anything.git
+

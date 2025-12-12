@@ -1,0 +1,85 @@
+================================================================================
+Google Maps Satellite Image Download Log
+Session started: 2025-11-27 15:25:24
+================================================================================
+
+[2025-11-27 15:25:24] Loading dataset from: ..\EI_train_data(Sheet1).csv
+[2025-11-27 15:25:24] Loaded 3000 records
+[2025-11-27 15:25:24]    Columns: ['sampleid', 'latitude', 'longitude', 'has_solar']
+[2025-11-27 15:25:24] 
+🚀 FULL MODE - Processing all 3,000 images
+
+[2025-11-27 15:25:24] ============================================================
+[2025-11-27 15:25:24] Starting image download...
+[2025-11-27 15:25:24] ============================================================
+
+[2025-11-27 15:26:35] ✅ [ 100/3000] Downloaded  100 images | Skipped:    0 | Errors:   0
+[2025-11-27 15:27:48] ✅ [ 200/3000] Downloaded  200 images | Skipped:    0 | Errors:   0
+[2025-11-27 15:29:06] ✅ [ 300/3000] Downloaded  300 images | Skipped:    0 | Errors:   0
+[2025-11-27 15:30:22] ✅ [ 400/3000] Downloaded  400 images | Skipped:    0 | Errors:   0
+[2025-11-27 15:31:41] ✅ [ 500/3000] Downloaded  500 images | Skipped:    0 | Errors:   0
+[2025-11-27 15:33:15] ✅ [ 600/3000] Downloaded  600 images | Skipped:    0 | Errors:   0
+[2025-11-27 15:34:30] ✅ [ 700/3000] Downloaded  700 images | Skipped:    0 | Errors:   0
+[2025-11-27 15:35:47] ✅ [ 800/3000] Downloaded  800 images | Skipped:    0 | Errors:   0
+[2025-11-27 15:37:02] ✅ [ 900/3000] Downloaded  900 images | Skipped:    0 | Errors:   0
+[2025-11-27 15:38:15] Failed 960.0: HTTPSConnectionPool(host='maps.googleapis.com', port=443): Read timed out. (read timeout=30)
+[2025-11-27 15:39:14] Failed 988.0: HTTPSConnectionPool(host='maps.googleapis.com', port=443): Read timed out.
+[2025-11-27 15:39:25] ✅ [1000/3000] Downloaded  998 images | Skipped:    0 | Errors:   2
+[2025-11-27 15:40:57] Failed 1062.0: HTTPSConnectionPool(host='maps.googleapis.com', port=443): Read timed out.
+[2025-11-27 15:41:47] Failed 1083.0: HTTPSConnectionPool(host='maps.googleapis.com', port=443): Read timed out.
+[2025-11-27 15:42:04] ✅ [1100/3000] Downloaded 1096 images | Skipped:    0 | Errors:   4
+[2025-11-27 15:43:18] ✅ [1200/3000] Downloaded 1196 images | Skipped:    0 | Errors:   4
+[2025-11-27 15:44:33] ✅ [1300/3000] Downloaded 1296 images | Skipped:    0 | Errors:   4
+[2025-11-27 15:45:47] ✅ [1400/3000] Downloaded 1396 images | Skipped:    0 | Errors:   4
+[2025-11-27 15:47:14] Failed 1473.0: HTTPSConnectionPool(host='maps.googleapis.com', port=443): Read timed out. (read timeout=30)
+[2025-11-27 15:48:12] Failed 1499.0: HTTPSConnectionPool(host='maps.googleapis.com', port=443): Read timed out.
+[2025-11-27 15:48:13] ✅ [1500/3000] Downloaded 1494 images | Skipped:    0 | Errors:   6
+[2025-11-27 15:49:34] Failed 1552.0: HTTPSConnectionPool(host='maps.googleapis.com', port=443): Read timed out.
+[2025-11-27 15:50:22] ✅ [1600/3000] Downloaded 1593 images | Skipped:    0 | Errors:   7
+[2025-11-27 15:51:41] ✅ [1700/3000] Downloaded 1693 images | Skipped:    0 | Errors:   7
+[2025-11-27 15:52:42] Failed 1734.0: HTTPSConnectionPool(host='maps.googleapis.com', port=443): Read timed out. (read timeout=30)
+[2025-11-27 15:53:33] ✅ [1800/3000] Downloaded 1792 images | Skipped:    0 | Errors:   8
+[2025-11-27 15:54:48] ✅ [1900/3000] Downloaded 1892 images | Skipped:    0 | Errors:   8
+[2025-11-27 15:56:14] ✅ [2000/3000] Downloaded 1992 images | Skipped:    0 | Errors:   8
+[2025-11-27 15:57:48] ✅ [2100/3000] Downloaded 2092 images | Skipped:    0 | Errors:   8
+[2025-11-27 15:59:20] ✅ [2200/3000] Downloaded 2192 images | Skipped:    0 | Errors:   8
+[2025-11-27 16:00:50] ✅ [2300/3000] Downloaded 2292 images | Skipped:    0 | Errors:   8
+[2025-11-27 16:02:18] ✅ [2400/3000] Downloaded 2392 images | Skipped:    0 | Errors:   8
+[2025-11-27 16:03:48] ✅ [2500/3000] Downloaded 2492 images | Skipped:    0 | Errors:   8
+[2025-11-27 16:05:21] ✅ [2600/3000] Downloaded 2592 images | Skipped:    0 | Errors:   8
+[2025-11-27 16:06:51] ✅ [2700/3000] Downloaded 2692 images | Skipped:    0 | Errors:   8
+[2025-11-27 16:08:14] ✅ [2800/3000] Downloaded 2792 images | Skipped:    0 | Errors:   8
+[2025-11-27 16:09:30] ✅ [2900/3000] Downloaded 2892 images | Skipped:    0 | Errors:   8
+[2025-11-27 16:10:45] ✅ [3000/3000] Downloaded 2992 images | Skipped:    0 | Errors:   8
+[2025-11-27 16:10:45] 
+============================================================
+[2025-11-27 16:10:45] ✅ DOWNLOAD COMPLETE
+[2025-11-27 16:10:45] ============================================================
+[2025-11-27 16:10:45] ⏱️  Total Time: 45.35 minutes (2720.9 seconds)
+[2025-11-27 16:10:45] 📊 Statistics:
+[2025-11-27 16:10:45]    ✅ Downloaded: 2,992 images
+[2025-11-27 16:10:45]    ⏭️  Skipped: 0 images
+[2025-11-27 16:10:45]    ❌ Errors: 8 images
+[2025-11-27 16:10:45]    📈 Success Rate: 99.7%
+[2025-11-27 16:10:45]    📁 Saved to: D:\Projects\Solar Classification\Data Analytics\Google\images
+[2025-11-27 16:10:45] ============================================================
+[2025-11-27 16:10:45] 
+❌ Error Details:
+[2025-11-27 16:10:45]    - 960.0 - HTTPSConnectionPool(host='maps.googleapis.com', port=443): Read timed out. (read timeout=30)
+[2025-11-27 16:10:45]    - 988.0 - HTTPSConnectionPool(host='maps.googleapis.com', port=443): Read timed out.
+[2025-11-27 16:10:45]    - 1062.0 - HTTPSConnectionPool(host='maps.googleapis.com', port=443): Read timed out.
+[2025-11-27 16:10:45]    - 1083.0 - HTTPSConnectionPool(host='maps.googleapis.com', port=443): Read timed out.
+[2025-11-27 16:10:45]    - 1473.0 - HTTPSConnectionPool(host='maps.googleapis.com', port=443): Read timed out. (read timeout=30)
+[2025-11-27 16:10:45]    - 1499.0 - HTTPSConnectionPool(host='maps.googleapis.com', port=443): Read timed out.
+[2025-11-27 16:10:45]    - 1552.0 - HTTPSConnectionPool(host='maps.googleapis.com', port=443): Read timed out.
+[2025-11-27 16:10:45]    - 1734.0 - HTTPSConnectionPool(host='maps.googleapis.com', port=443): Read timed out. (read timeout=30)
+
+================================================================================
+Session ended: 2025-11-27 16:10:45
+================================================================================
+[2025-11-27 16:10:45] 
+============================================================
+[2025-11-27 16:10:45] ✅ PROGRAM COMPLETED SUCCESSFULLY
+[2025-11-27 16:10:45] 📄 Log file saved to: D:\Projects\Solar Classification\Data Analytics\Google\log.txt
+[2025-11-27 16:10:45] ============================================================
+

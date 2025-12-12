@@ -1,0 +1,26 @@
+{
+  "sample_id": "0960_1",
+  "lat": 21.198934,
+  "lon": 72.797171,
+  "has_solar": false,
+  "has_solar_label": true,
+  "confidence": 0.0,
+  "panel_count_est": 0,
+  "panel_array_count": 0,
+  "pv_area_sqm_est": 0.0,
+  "capacity_kw_est": 0.0,
+  "qc_status": "no_detection",
+  "qc_notes": [
+    "no solar panels detected"
+  ],
+  "bbox_or_mask": "",
+  "image_metadata": {
+    "source": "Google_Maps_Static_API",
+    "capture_date": "unknown",
+    "zoom_level": 20,
+    "image_size": "640x640",
+    "pixel_resolution_m": 0.15
+  },
+  "detection_method": "SAM_LangSAM_ZeroShot",
+  "zero_shot_enabled": true
+}

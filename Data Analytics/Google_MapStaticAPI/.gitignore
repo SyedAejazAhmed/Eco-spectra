@@ -1,0 +1,29 @@
+# Google Maps API - Do not commit sensitive files
+
+# Environment variables (contains API key)
+.env
+
+# Downloaded images (too large for git)
+images/
+*.png
+*.jpg
+*.jpeg
+
+# Cost tracking data (may contain sensitive usage info)
+cost_tracking.json
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,20 @@
+# Service Account Key (SENSITIVE)
+service-account-key.json
+
+# Environment variables
+.env
+service-account-key.json
+# Output directories
+gee_images/
+*.png
+
+# Logs
+log.txt
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+images/

@@ -1,0 +1,67 @@
+# Core data processing
+
+pandas>=2.0.0
+requests>=2.32.0
+python-dotenv>=1.0.0
+numpy>=1.24.0
+tqdm>=4.65.0
+
+# Image processing
+pillow>=10.0.0
+opencv-python>=4.8.0
+matplotlib>=3.7.0
+
+# Earth Engine / Geospatial
+earthengine-api
+rasterio>=1.3.0
+shapely>=2.0.0
+geojson>=3.0.0
+
+# Scientific computing
+scipy>=1.11.0
+
+# SAM (Segment Anything Model) Dependencies
+# Note: For GPU support, see requirements_cuda.txt
+torch>=2.0.0
+torchvision>=0.15.0
+
+# Segment Anything Model
+segment-anything
+
+# Lang-SAM for text-prompt detection (from GitHub)
+# NOTE: Commented out due to:
+# 1. Conflicts with FastSAM (gradio version incompatibility)
+# 2. Has known tensor dimension errors (not working)
+# 3. FastSAM is the recommended alternative
+# supervision 
+# transformers
+# git+https://github.com/luca-medeiros/lang-segment-anything.git
+
+# FastSAM - Alternative SAM implementation (YOLOv8-based, faster and more stable)
+# This is the RECOMMENDED approach
+# Using Ultralytics built-in FastSAM (compatible with modern versions)
+# Note: No need for standalone fastsam package - Ultralytics 8.0+ includes FastSAM
+ultralytics>=8.0.0
+geoai-py
+
+# NREL Panel-Segmentation Requirements
+# Deep learning framework for NREL model
+# (torch and torchvision already listed above)
+
+# Detectron2 for instance segmentation (NREL dependency)
+# Install separately: pip install 'git+https://github.com/facebookresearch/detectron2.git'
+# detectron2
+
+# Additional image processing for NREL
+opencv-contrib-python>=4.8.0
+scikit-image>=0.21.0
+
+# Geospatial processing for NREL (some already listed above)
+geopandas>=0.13.0
+pyproj>=3.5.0
+
+# Utilities
+seaborn>=0.12.0
+pyyaml>=6.0
+jsonschema>=4.17.0
+scikit-learn>=1.3.0
