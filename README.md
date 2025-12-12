@@ -678,11 +678,6 @@ type Segmentation\MaskRCNN_Solar\detection_log.txt
 ![GitHub forks](https://img.shields.io/github/forks/SyedAejazAhmed/Solar-Detection?style=social)
 ![GitHub watchers](https://img.shields.io/github/watchers/SyedAejazAhmed/Solar-Detection?style=social)
 
-## 👥 Collaborators
-
-- [Syed Aejaz Ahmed](https://github.com/SyedAejazAhmed) (Owner)
-- Contributions welcome!
-
 ## 🔬 Research Methodology
 
 ### Experimental Process
@@ -743,6 +738,12 @@ Our research followed a systematic approach to identify the optimal detection me
 5. **Deployment**: Docker containerization for reproducible production deployment
 
 ---
+
+## 👥 Collaborators
+
+• [Syed Aejaz Ahmed](https://github.com/SyedAejazAhmed) (Owner)
+• [Nowrin Begum R](https://github.com/NowrinbegumR) (Collaborator)
+• [Reya Josephine](https://github.com/Reyajosephine) (Collaborator)
 
 **🌞 Built for Sustainable Energy Research**
 
