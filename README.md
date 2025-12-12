@@ -1,87 +1,86 @@
-# Solar Panel Detection Project
+# Solar Panel Detection System
 
-A comprehensive AI-powered solar panel detection system using fine-tuned Mask R-CNN for automated identification and analysis of solar installations from satellite imagery.
+An AI-powered solar panel detection system utilizing fine-tuned Mask R-CNN for automated identification and analysis of solar installations from satellite imagery.
 
-## 📋 Table of Contents
+## Table of Contents
 
-- [Project Overview](#project-overview)
+- [Overview](#overview)
 - [Features](#features)
-- [Project Structure](#project-structure)
+- [System Architecture](#system-architecture)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Model Workflow](#model-workflow)
+- [Model Performance](#model-performance)
+- [Technical Specifications](#technical-specifications)
 - [Project Components](#project-components)
-- [Results](#results)
-- [Technical Details](#technical-details)
+- [Contributing](#contributing)
 
 ---
 
-## 🌞 Project Overview
+## Overview
 
-This project implements an end-to-end pipeline for detecting solar panels in satellite imagery using deep learning. The system utilizes a fine-tuned **Mask R-CNN ResNet50-FPN v2** model to achieve high-accuracy instance segmentation of solar panel installations.
+This project implements an end-to-end pipeline for detecting solar panels in satellite imagery using deep learning. The system employs a fine-tuned **Mask R-CNN ResNet50-FPN v2** model for high-accuracy instance segmentation of solar panel installations.
 
-### Key Achievements
-- **100% accuracy** on test dataset (100 images)
-- **94% average confidence** score across detections
-- **Explainable AI** features with reason codes and quality assessment
-- **Production-ready** inference pipeline with comprehensive audit trails
+### Performance Metrics
 
----
-
-## ✨ Features
-
-### Core Capabilities
-- ✅ **Instance Segmentation**: Precise pixel-level detection of solar panels
-- ✅ **Fine-tuned Model**: Custom-trained Mask R-CNN on solar panel dataset
-- ✅ **High Accuracy**: 100% detection rate on labeled data
-- ✅ **Explainable AI**: Reason codes explaining detection decisions
-- ✅ **Quality Assessment**: Automated image quality verification
-- ✅ **Batch Processing**: Process thousands of images efficiently
-- ✅ **Multiple Output Formats**: JSON, CSV, and visualizations
-
-### Explainability Features
-- **Reason Codes**: `uniform_spacing`, `module_grid`, `rectilinear_array`, `racking_shadows`, `high_confidence_features`, `panel_characteristics`
-- **QC Status**: `VERIFIABLE` or `NOT_VERIFIABLE` based on image quality
-- **Detection Reasoning**: Human-readable explanations for all predictions
-- **Image Quality Metrics**: Resolution, clarity, occlusion analysis
-- **Audit Trail**: Detection scores, mask info, and metadata
+| Metric | Value |
+|--------|-------|
+| Test Accuracy | 100% (100/100 images) |
+| Average Confidence | 94% |
+| Detection Rate | 100% on labeled data |
+| Inference Speed (GPU) | 0.5-1 sec/image |
+| Inference Speed (CPU) | 3-5 sec/image |
 
 ---
 
-## 📁 Project Structure
+## Features
 
-```
-Solar Detection/
-├── setup.bat                           # Automated setup script
-├── README.md                           # This file
-├── requirements.txt                    # Base Python dependencies
-├── requirements_cpu.txt                # CPU-only dependencies
-├── requirements_cuda.txt               # GPU/CUDA dependencies
+### Detection Capabilities
+- Instance segmentation with pixel-level precision
+- Fine-tuned Mask R-CNN model on solar panel dataset
+- Automated image quality assessment
+- Batch processing for large-scale analysis
+- Multiple output formats (JSON, CSV, PNG)
+
+### Explainability & Quality Assurance
+- Automated reason code generation for detections
+- Quality control status classification (VERIFIABLE/NOT_VERIFIABLE)
+- Human-readable detection explanations
+- Comprehensive audit trails with metadata
+- Image quality metrics (resolution, clarity, occlusion)
+
+### Supported Reason Codes
+- `uniform_spacing` - Regular grid pattern detected
+- `module_grid` - Module arrangement identified
+- `rectilinear_array` - Rectangular panel shapes
+- `racking_shadows` - Panel mounting sh# Automated environment setup
+├── README.md                          # Project documentation
+├── requirements*.txt                  # Python dependencies
 │
-├── Data Analytics/                     # Data collection and preparation
+├── Data Analytics/                    # Data collection pipeline
 │   ├── EI_train_data(Sheet1).csv     # Training labels (3000 samples)
-│   ├── Google_MapStaticAPI/           # Satellite image collection
-│   │   ├── app.py                     # Image download script
-│   │   ├── images/                    # 3000 satellite images (640x640px)
-│   │   └── README.md
-│   ├── ESRI_Data/                     # ESRI satellite data
-│   ├── Goggle_EarthEngine/            # Google Earth Engine data
-│   └── mapbox/                        # Mapbox satellite data
+│   ├── Google_MapStaticAPI/          # Primary data source
+│   ├── ESRI_Data/                    # Alternative source
+│   ├── Goggle_EarthEngine/           # Alternative source
+│   └── mapbox/                       # Alternative source
 │
-├── Segmentation/                       # Main model directory
-│   └── MaskRCNN_Solar/                # Fine-tuned Mask R-CNN
-│       ├── finetune_solar_detector.py  # Training script
-│       ├── inference_finetuned.py      # Production inference script
-│       ├── finetuned_model/           # Model artifacts
-│       │   ├── weights/
-│       │   │   └── final_model.pth    # Trained model weights
-│       │   └── training_log.txt       # Training history
-│       └── finetuned_output/          # Inference results
-│           ├── detection_results.csv   # Summary CSV
-│           ├── json_records/          # Individual JSON records
-│           └── visualizations/        # Detection visualizations
+├── Segmentation/                      # Production model
+│   └── MaskRCNN_Solar/
+│       ├── finetune_solar_detector.py    # Training pipeline
+│       ├── inference_finetuned.py        # Production inference
+│       ├── finetuned_model/
+│       │   ├── weights/final_model.pth   # Trained weights
+│       │   └── training_log.txt          # Training history
+│       └── finetuned_output/
+│           ├── detection_results.csv     # Results summary
+│           ├── json_records/             # Detailed records
+│           └── visualizations/           # Visual outputs
 │
-├── SAM_Zero_Count/                     # Alternative detection methods
+├── SAM_Zero_Count/                    # Experimental models
+│   ├── FastSAM/
+│   ├── LangSAM/
+│   └── MaskRCNN_Solar/
+│
+└── solar/                             # Virtual environment_Count/                     # Alternative detection methods
 │   ├── FastSAM/                       # FastSAM implementation
 │   ├── LangSAM/                       # LangSAM implementation
 │   └── MaskRCNN_Solar/                # Initial Mask R-CNN experiments
@@ -107,61 +106,56 @@ Solar Detection/
 ### Automated Setup (Recommended)
 
 Run the setup batch file to automatically create the environment and install dependencies:
+Installation
+
+### System Requirements
+
+| Component | Specification |
+|-----------|---------------|
+| Python | 3.8+ (3.11 recommended) |
+| RAM | 8GB minimum, 16GB recommended |
+| GPU | NVIDIA RTX 4070+ (optional) |
+| CUDA | 12.1+ (for GPU acceleration) |
+| Storage | 5GB+ for dataset and outputs |
+
+### Automated Setup
+
+Execute the setup script to configure the environment automatically:
 
 ```batch
 setup.bat
 ```
 
-The script will:
-1. Create a virtual environment named `solar`
-2. Detect GPU availability (CUDA)
-3. Install appropriate dependencies:
-   - **GPU detected**: Uses `requirements_cuda.txt` + `requirements.txt`
-   - **CPU only**: Uses `requirements_cpu.txt` or `requirements.txt`
-4. Verify installation
+The script performs the following operations:
+1. Creates a virtual environment (`solar`)
+2. Detects GPU/CUDA availability
+3. Installs appropriate dependencies
+4. Verifies installation integrity
 
-### Manual Setup
-
-If you prefer manual installation:
+### Manual Installation
 
 ```bash
-# Create virtual environment
+# Create and activate virtual environment
 python -m venv solar
-
-# Activate virtual environment
-# Windows:
-solar\Scripts\activate.bat
-# Linux/Mac:
-source solar/bin/activate
+solar\Scripts\activate.bat  # Windows
+source solar/bin/activate   # Linux/Mac
 
 # Install dependencies
-# For GPU (CUDA):
-pip install -r requirements_cuda.txt
-pip install -r requirements.txt
+pip install -r requirements_cuda.txt  # GPU
+pip install -r requirements.txt       # Base
 
-# For CPU only:
+# Or for CPU-only
 pip install -r requirements_cpu.txt
 ```
 
-### Dependencies Overview
-- **PyTorch** (with CUDA support for GPU)
-- **torchvision** (for Mask R-CNN model)
-- **OpenCV** (image processing)
-- **Pandas** (data handling)
-- **NumPy** (numerical operations)
-- **scikit-learn** (clustering algorithms)
-- **Pillow** (image I/O)
-
----
-
-## 💻 Usage
-
-### 1. Quick Test (First 100 Images)
-
-Test the fine-tuned model on the first 100 images:
-
-```bash
-# Activate environment
+### Core Dependencies
+- **PyTorch** - Deep learning framework with CUDA support
+- **torchvision** - Computer vision models and utilities
+- **OpenCV** - Image processing operations
+- **Pandas** - Data manipulation and analysis
+- **NumPy** - Numerical computing
+- **scikit-learn** - Machine learning utilities
+- **Pillow** - Image I/O operations
 solar\Scripts\activate.bat
 
 # Run test inference
@@ -170,45 +164,53 @@ python Segmentation\MaskRCNN_Solar\inference_finetuned.py --mode test
 
 **Expected Output:**
 - Processes 100 images in ~2-3 minutes
-- 100% accuracy on labeled data
-- Results in `Segmentation\MaskRCNN_Solar\finetuned_output\`
+- 1Usage
 
-### 2. Full Dataset Processing (3000 Images)
+### Test Inference (100 Images)
 
-Process the entire dataset:
+```bash
+# Activate environment
+solar\Scripts\activate.bat
+
+# Run inference on test set
+python Segmentation\MaskRCNN_Solar\inference_finetuned.py --mode test
+```
+
+**Processing Time:** 2-3 minutes (GPU) | Output: `finetuned_output/`
+
+### Full Dataset Processing (3000 Images)
 
 ```bash
 python Segmentation\MaskRCNN_Solar\inference_finetuned.py --mode full
 ```
 
-**Expected Runtime:** 30-60 minutes (GPU) or 2-4 hours (CPU)
+**Processing Time:** 30-60 minutes (GPU) | 2-4 hours (CPU)
 
-### 3. Training the Model
-
-To retrain or fine-tune the model:
+### Model Training
 
 ```bash
 python Segmentation\MaskRCNN_Solar\finetune_solar_detector.py
 ```
 
 **Training Configuration:**
-- **Epochs**: 25 (default)
-- **Batch Size**: 4
-- **Learning Rate**: 0.0005
-- **Optimizer**: SGD with momentum
-- **Expected Time**: 2-3 hours on RTX 4070
 
-### 4. Output Files
+| Parameter | Value |
+|-----------|-------|
+| Epochs | 25 |
+| Batch Size | 4 |
+| Learning Rate | 0.0005 |
+| Optimizer | SGD with momentum |
+| Training Time | 2-3 hours (RTX 4070) |
 
-After inference, results are saved to `Segmentation\MaskRCNN_Solar\finetuned_output\`:
+### Output Formats
 
 **CSV Summary** (`detection_results.csv`):
 ```csv
-sample_id,has_solar_detected,confidence,panel_count,array_count,qc_status,...
-0001,true,0.959,17,7,VERIFIABLE,...
+sample_id,has_solar_detected,confidence,panel_count,array_count,qc_status
+0001,true,0.959,17,7,VERIFIABLE
 ```
 
-**JSON Records** (`json_records/0001.json`):
+**JSON Records** (`json_records/{sample_id}.json`):
 ```json
 {
   "sample_id": "0001",
@@ -224,7 +226,7 @@ sample_id,has_solar_detected,confidence,panel_count,array_count,qc_status,...
     "clarity_score": 1.0,
     "resolution_score": 1.0
   },
-  "detection_scores": [0.958, 0.957, ...],
+  "detection_scores": [0.958, 0.957],
   "mask_info": {
     "mask_count": 17,
     "total_mask_pixels": 7170
@@ -232,26 +234,10 @@ sample_id,has_solar_detected,confidence,panel_count,array_count,qc_status,...
 }
 ```
 
-**Visualizations** (`visualizations/0001_finetuned.png`):
-- Red overlay: Detected solar panels
-- Green boxes: Bounding boxes with confidence scores
-- Header: Panel count and average confidence
-
----
-
-## 🔬 Model Workflow
-
-### Complete Pipeline
-
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                     DATA COLLECTION                              │
-├─────────────────────────────────────────────────────────────────┤
-│  Google Maps Static API → 3000 satellite images (640x640 px)   │
-│  Resolution: 0.15 m/pixel                                       │
-│  Labels: EI_train_data(Sheet1).csv                            │
-└─────────────────────────────────────────────────────────────────┘
-                              ↓
+**Visualizations** (`visualizations/{sample_id}_finetuned.png`):
+- Red overlay indicating detected panels
+- Green bounding boxes with confidence scores
+- Header displaying p                   ↓
 ┌─────────────────────────────────────────────────────────────────┐
 │                     MODEL TRAINING                               │
 ├─────────────────────────────────────────────────────────────────┤
@@ -263,222 +249,177 @@ sample_id,has_solar_detected,confidence,panel_count,array_count,qc_status,...
                               ↓
 ┌─────────────────────────────────────────────────────────────────┐
 │                     INFERENCE PIPELINE                           │
-├─────────────────────────────────────────────────────────────────┤
-│  1. Image Quality Analysis                                      │
-│     - Resolution check (640x640)                                │
-│     - Clarity score (Laplacian variance)                        │
-│     - Occlusion detection (shadows, clouds)                     │
-│                                                                  │
-│  2. Detection                                                    │
-│     - Mask R-CNN inference (confidence > 0.6)                   │
-│     - Area filtering (100-5000 pixels)                          │
-│     - Aspect ratio filtering (0.3-3.5)                          │
-│                                                                  │
-│  3. Post-processing                                             │
-│     - Panel counting                                            │
-│     - Array clustering (DBSCAN)                                 │
-│     - Area calculation (m²)                                     │
-│     - Capacity estimation (kW)                                  │
-│                                                                  │
-│  4. Explainability                                              │
-│     - Reason code generation                                    │
-│     - QC status determination                                   │
-│     - Detection reasoning                                       │
-│                                                                  │
-│  5. Output Generation                                           │
-│     - JSON records (with audit trail)                           │
-│     - CSV summary                                               │
-│     - Visualization images                                      │
-└─────────────────────────────────────────────────────────────────┘
-                              ↓
-┌─────────────────────────────────────────────────────────────────┐
-│                     RESULTS                                      │
-├─────────────────────────────────────────────────────────────────┤
-│  ✓ 100% accuracy on test set                                    │
-│  ✓ 94% average confidence                                       │
-│  ✓ Full explainability and audit trails                        │
-└─────────────────────────────────────────────────────────────────┘
+├──Model Performance
+
+### Inference Pipeline
+
 ```
-
-### Detailed Inference Steps
-
-1. **Image Quality Analysis** - Resolution, clarity, occlusion detection
-2. **Detection** - Mask R-CNN inference with confidence/area/aspect filtering
-3. **Post-processing** - Panel counting, array clustering (DBSCAN), metrics
-4. **Explainability** - Reason codes, QC status, detection reasoning
-5. **Output** - JSON records, CSV summary, PNG visualizations
-
-📖 **[Detailed technical documentation →](Segmentation/MaskRCNN_Solar/README.md)**
-
----
-
-## 🗂️ Project Components
-
-### 1. Data Analytics
-
-#### Google Maps Static API (`Data Analytics/Google_MapStaticAPI/`)
-**Purpose**: Collect satellite imagery for training and inference
-- Downloads 3,000 satellite images (640x640 pixels, 0.15 m/pixel)
-- Batch processing with retry logic
-
-📖 **[See detailed documentation →](Data%20Analytics/Google_MapStaticAPI/README.md)**
-
-#### Alternative Data Sources
-- **ESRI Data** (`Data Analytics/ESRI_Data/`) - [README](Data%20Analytics/ESRI_Data/README.md)
-- **Google Earth Engine** (`Data Analytics/Goggle_EarthEngine/`) - [README](Data%20Analytics/Goggle_EarthEngine/README.md)
-- **Mapbox** (`Data Analytics/mapbox/`) - [README](Data%20Analytics/mapbox/README.md)
-
-### 2. SAM Zero-Shot Experiments
-
-Experimental implementations testing various segmentation approaches:
-
-- **FastSAM** (`SAM_Zero_Count/FastSAM/`) - Fast inference, lower accuracy - [README](SAM_Zero_Count/FastSAM/README.md)
-- **LangSAM** (`SAM_Zero_Count/LangSAM/`) - Language-guided segmentation - [README](SAM_Zero_Count/LangSAM/README.md)
-- **Baseline Mask R-CNN** (`SAM_Zero_Count/MaskRCNN_Solar/`) - Initial experiments - [README](SAM_Zero_Count/MaskRCNN_Solar/README.md)
-
-**Conclusion**: Pre-trained models needed fine-tuning for production accuracy
-
-### 3. Fine-tuned Mask R-CNN (Production Model)
-
-**Location**: `Segmentation/MaskRCNN_Solar/`
-
-**Architecture**: Mask R-CNN ResNet50-FPN v2
-- Base: COCO-pretrained ResNet50 with Feature Pyramid Network
-- Fine-tuned: 25 epochs on 3,000 solar panel images
-- Output: Instance segmentation masks + confidence scores
-
-**Key Scripts:**
-- `finetune_solar_detector.py` - Training script (25 epochs, 2-3 hours)
-- `inference_finetuned.py` - Production inference with explainability
-
-**Features:**
-- 100% test accuracy, 94% average confidence
-- Image quality assessment (resolution, clarity, occlusion)
-- Multi-stage filtering and DBSCAN clustering
-- Explainability: reason codes, QC status, detection reasoning
-- Multiple outputs: JSON, CSV, PNG visualizations
-
-📖 **[Complete model documentation →](Segmentation/MaskRCNN_Solar/README.md)**
-
----
-
-## 📊 Results
-
-### Model Performance
-
-| Metric | Value |
-|--------|-------|
-| **Test Accuracy** | 100% (100/100 images) |
-| **Average Confidence** | 94% |
-| **Detection Rate** | 100% on labeled solar panels |
-| **False Positives** | Minimal (filtered by quality checks) |
-| **Inference Speed (GPU)** | ~0.5-1 sec/image |
-| **Inference Speed (CPU)** | ~3-5 sec/image |
+DATA COLLECTION
+├─ Google Maps Static API
+├─ 3000 satellite images (640×640 px, 0.15 m/pixel)
+└─ Labels: EI_train_data(Sheet1).csv
+    ↓
+MODEL TRAINING
+├─ Base: Mask R-CNN ResNet50-FPN v2 (COCO-pretrained)
+├─ Fine-tuning: 25 epochs
+├─ Final Loss: 1.4704
+└─ Training Time: 2-3 hours (RTX 4070)
+    ↓
+INFERENCE PIPELINE
+├─ 1. Image Quality Analysis
+│   ├─ Resolution validation (640×640)
+│   ├─ Clarity assessment (Laplacian variance)
+│   └─ Occlusion detection
+├─ 2. Detection
+│   ├─ Mask R-CNN inference (confidence > 0.6)
+│   ├─ Area filtering (100-5000 pixels)
+│   └─ Aspect ratio filtering (0.3-3.5)
+├─ 3. Post-processing
+│   ├─ Panel counting
+│   ├─ Array clustering (DBSCAN)
+│   ├─ Area calculation (m²)
+│   └─ Capacity estimation (kW)
+├─ 4. Explainability
+│   ├─ Reason code generation
+│   ├─ QC status determination
+│   └─ Detection reasoning
+└─ 5. Output Generation
+    ├─ JSON records with audit trails
+    ├─ CSV summary
+    └─ Visualization images
+    ↓
+RESULTS
+├─ 100% accuracy on test set
+├─ 94% average confidence
+└─ Full explainability and audit trails
+```
 
 ### Training History
 
-```
-Epoch  1/25: Loss = 2.8453
-Epoch  5/25: Loss = 2.1234
-Epoch 10/25: Loss = 1.8921
-Epoch 15/25: Loss = 1.6543
-Epoch 20/25: Loss = 1.5234
-Epoch 25/25: Loss = 1.4704 ✓ (Final)
-```
+| Epoch | Loss |
+|-------|------|
+| 1/25 | 2.8453 |
+| 5/25 | 2.1234 |
+| 10/25 | 1.8921 |
+| 15/25 | 1.6543 |
+| 20/25 | 1.5234 |
+| 25/25 | 1.4704 |
 
-### Sample Detection Statistics
+### Sample Detection Results
 
 **Image 0001:**
-- Panels Detected: 17
-- Arrays: 7
-- Confidence: 95.9%
-- Area: 161.32 m²
-- Estimated Capacity: 32.3 kW
-- QC Status: VERIFIABLE
-- Reason Codes: `rectilinear_array`, `racking_shadows`, `panel_characteristics`
+- Panels: 17 | Arrays: 7 | Confidence: 95.9%
+- Area: 161.32 m² | Capacity: 32.3 kW
+- QC: VERIFIABLE | Reasons: rectilinear_array, racking_shadows
 
 **Image 0148:**
-- Panels Detected: 45
-- Arrays: 17
-- Confidence: 95.8%
-- Area: 647.82 m²
-- Estimated Capacity: 129.6 kW
-- QC Status: VERIFIABLE
-- Reason Codes: `rectilinear_array`, `panel_characteristics`
+- PaModel Architecture
 
----
-
-## 🔧 Technical Details
+**Mask R-CNN ResNet50-FPN v2**
+- Base: COCO-pretrained ResNet50 with Feature Pyramid Network
+- Fine-tuned on 3,000 solar panel images (25 epochs)
+- Output: Instance segmentation masks with confidence scores
 
 ### Image Quality Assessment
-- **Metrics**: Resolution, clarity (Laplacian variance), brightness, occlusion
-- **QC Status**: VERIFIABLE (good quality) or NOT_VERIFIABLE (quality issues)
 
-### Reason Codes
-Explainable AI codes indicating detection features:
-- `uniform_spacing` / `module_grid` - Regular grid pattern
-- `rectilinear_array` - Rectangular panel shapes
-- `racking_shadows` - Panel mounting shadows
-- `high_confidence_features` - Mean confidence > 0.85
-- `panel_characteristics` - Dark/blue panel detection
+| Parameter | Method |
+|-----------|--------|
+| Resolution | 640×640 pixel validation |
+| Clarity | Laplacian variance analysis |
+| Brightness | Histogram analysis |
+| Occlusion | Shadow and cloud detection |
+| QC Status | VERIFIABLE / NOT_VERIFIABLE |
 
-### Calculations
+### Detection Parameters
+
+| Parameter | Value |
+|-----------|-------|
+| Confidence Threshold | 0.6 |
+| Area Filter | 100-5000 pixels |
+| Aspect Ratio | 0.3-3.5 |
+| Clustering Algorithm | DBSCAN (eps=80, min_samples=1) |
+
+### Capacity Calculations
+
 - **Area**: Pixel count × (0.15 m/pixel)²
 - **Capacity**: Area (m²) × 0.2 kW/m²
-- **Array Clustering**: DBSCAN (eps=80, min_samples=1)
-
-📖 **[Complete technical documentation →](Segmentation/MaskRCNN_Solar/README.md)**
 
 ---
 
-## 🎯 Use Cases
+## Project Components
 
-1. **Solar Installation Inventory**: Automated detection of existing solar panels
-2. **Capacity Estimation**: Calculate total solar capacity in a region
-3. **Urban Planning**: Identify potential locations for new installations
-4. **Energy Audits**: Verify solar panel installations
-5. **Research**: Study solar panel adoption patterns
+### Data Analytics
+
+**Google Maps Static API** ([Documentation](Data%20Analytics/Google_MapStaticAPI/README.md))
+- Primary satellite imagery source
+- 3,000 images at 640×640 pixels, 0.15 m/pixel resolution
+- Batch processing with retry logic
+
+**Alternative Sources:**
+- [ESRI Data](Data%20Analytics/ESRI_Data/README.md)
+- [Google Earth Engine](Data%20Analytics/Goggle_EarthEngine/README.md)
+- [Mapbox](Data%20Analytics/mapbox/README.md)
+
+### Experimental Models
+
+**Zero-Shot Segmentation Experiments:**
+- [FastSAM](SAM_Zero_Count/FastSAM/README.md) - Fast inference with lower accuracy
+- [LangSAM](SAM_Zero_Count/LangSAM/README.md) - Language-guided segmentation
+- [Baseline Mask R-CNN](SAM_Zero_Count/MaskRCNN_Solar/README.md) - Initial experiments
+
+**Findings:** Pre-trained models required fine-tuning for production-grade accuracy
+
+### Production Model
+
+**Location:** `Segmentation/MaskRCNN_Solar/`
+
+**Key Scripts:**
+- `finetune_solar_detector.py` - Training pipeline (25 epochs, 2-3 hours)
+- `inference_finetuned.py` - Production inference with explainability
+
+**Capabilities:**
+- 100% test accuracy with 94% average confidence
+- Automated quality assessment
+- DBSCAN-based array clustering
+- Comprehensive explainability features
+- Multiple output formats (JSON, CSV, PNG)
+
+[Complete technical documentation](Segmentation/MaskRCNN_Solar/README.md)
 
 ---
 
-## 📝 Future Enhancements
+## Applications
 
-- [ ] Multi-class detection (roof types, panel orientations)
-- [ ] Temporal analysis (track installations over time)
-- [ ] Integration with GIS systems
-- [ ] Real-time detection API
-- [ ] Mobile app deployment
-- [ ] Panel degradation detection
-- [ ] Angle and tilt estimation
+- **Asset Management**: Automated inventory of solar installations
+- **Energy Planning**: Regional capacity estimation and forecasting
+- **Urban Development**: Site suitability analysis for new installations
+- **Compliance**: Verification of installed systems
+- **Research**: Solar adoption pattern analysis
 
 ---
 
-## 🤝 Contributing
+## Future Development
 
-This is a research project. For questions or collaboration:
-1. Review the code in `Segmentation/MaskRCNN_Solar/`
-2. Check training logs in `finetuned_model/training_log.txt`
-3. Examine sample outputs in `finetuned_output/`
-
----
-
-## 📄 License
-
-This project uses:
-- **PyTorch** (BSD License)
-- **torchvision** (BSD License)
-- **OpenCV** (Apache 2.0)
-- **Google Maps Static API** (Requires API key and billing)
+- Multi-class detection (roof types, orientations)
+- Temporal change detection
+- GIS system integration
+- RESTful API deployment
+- Mobile application
+- Degradation assessment
+- Tilt angle estimation
 
 ---
 
-## 🙏 Acknowledgments
+## Contributing
 
-- **Mask R-CNN**: He et al., "Mask R-CNN" (ICCV 2017)
-- **ResNet**: He et al., "Deep Residual Learning" (CVPR 2016)
-- **Feature Pyramid Networks**: Lin et al., "FPN" (CVPR 2017)
-- **PyTorch Team**: For excellent deep learning framework
-- **Google Maps**: For satellite imagery
+For inquiries or collaboration opportunities:
+1. Review implementation in `Segmentation/MaskRCNN_Solar/`
+2. Consult training logs in `finetuned_model/training_log.txt`
+3. Examine outputs in `finetuned_output/`
+
+---
+
+##oogle Maps**: For satellite imagery
 
 ---
 
@@ -496,3 +437,44 @@ For technical issues:
 **Model Version**: Mask R-CNN ResNet50-FPN v2 (Fine-tuned)
 **Python Version**: 3.11+
 **PyTorch Version**: 2.0+
+- **PyTorch** - BSD License
+- **torchvision** - BSD License
+- **OpenCV** - Apache 2.0 License
+- **Google Maps Static API** - Requires API key and billing account
+
+---
+
+## Acknowledgments
+
+**Research References:**
+- He et al., "Mask R-CNN" (ICCV 2017)
+- He et al., "Deep Residual Learning for Image Recognition" (CVPR 2016)
+- Lin et al., "Feature Pyramid Networks for Object Detection" (CVPR 2017)
+
+**Technology Stack:**
+- PyTorch development team
+- Google Maps Platform
+
+---
+
+## Support
+
+**Troubleshooting:**
+
+1. Training issues - Review `finetuned_model/training_log.txt`
+2. Inference errors - Check `detection_log.txt`
+3. GPU verification - Run `python -c "import torch; print(torch.cuda.is_available())"`
+4. Environment activation - Execute `solar\Scripts\activate.bat`
+
+---
+
+## Project Information
+
+| Property | Value |
+|----------|-------|
+| Last Updated | December 12, 2025 |
+| Model Version | Mask R-CNN ResNet50-FPN v2 (Fine-tuned) |
+| Python Version | 3.8+ (3.11 recommended) |
+| PyTorch Version | 2.0+ |
+| Dataset Size | 3,000 images |
+| Test Accuracy | 100% |
