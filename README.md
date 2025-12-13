@@ -238,6 +238,65 @@ Results are saved in `Segmentation\MaskRCNN_Solar\finetuned_output\`:
 - 📁 `json_records/` - Detailed JSON files
 - 📁 `visualizations/` - Annotated images
 
+## 🐳 Docker Deployment
+
+### Quick Deploy with Docker Hub
+
+The easiest way to run the web application is using our pre-built Docker image:
+
+```bash
+# Pull the image from Docker Hub
+docker pull syedaejaz/eco-spectra:v1.0
+
+# Run the container
+docker run -d -p 3001:8000 --name solar-detection syedaejaz/eco-spectra:v1.0
+
+# Access the application
+# Open browser: http://localhost:3001
+```
+
+**What's Included:**
+- ✅ FastAPI backend with coordinate-based detection
+- ✅ React TypeScript frontend with modern UI
+- ✅ Pre-loaded detection model and dataset (3,000 records)
+- ✅ Real-time coordinate lookup with 0.5km radius matching
+- ✅ JSON and visualization file serving
+
+**Container Management:**
+
+```bash
+# View running containers
+docker ps
+
+# Stop the container
+docker stop solar-detection
+
+# Start the container
+docker start solar-detection
+
+# View logs
+docker logs solar-detection
+
+# Remove the container
+docker rm solar-detection
+```
+
+### Build from Source (Alternative)
+
+If you want to build the Docker image locally:
+
+```bash
+cd Production
+docker-compose up -d --build
+```
+
+This will:
+1. Build the multi-stage Docker image (frontend + backend)
+2. Start the service on port 3001
+3. Mount necessary data files (CSV, JSON, visualizations)
+
+**Docker Hub Repository:** [syedaejaz/eco-spectra](https://hub.docker.com/r/syedaejaz/eco-spectra)
+
 ## 🎓 Model Training
 
 To train or fine-tune the model on your own dataset:
