@@ -1,0 +1,209 @@
+================================================================================
+FastSAM Solar Panel Detection Log
+Session started: 2025-12-02 18:20:22
+================================================================================
+
+[2025-12-02 18:20:22] 🛰️  FASTSAM SOLAR PANEL DETECTOR
+[2025-12-02 18:20:22] ================================================================================
+[2025-12-02 18:20:22] 📅 Date: 2025-12-02 18:20:22
+[2025-12-02 18:20:22] 🎯 Project: Solar Classification Dataset
+[2025-12-02 18:20:22] ================================================================================
+[2025-12-02 18:20:22] 
+📂 Configuration:
+[2025-12-02 18:20:22]    Image Directory: D:\Projects\Solar Detection\Data Analytics\Google_MapStaticAPI\images
+[2025-12-02 18:20:22]    Output Directory: D:\Projects\Solar Detection\SAM_Zero_Count\FastSAM\output
+[2025-12-02 18:20:22]    Model: FastSAM-X
+[2025-12-02 18:20:22]    Text Prompts: ['solar panel', 'solar panels', 'photovoltaic panel', 'rooftop solar', 'PV panel', 'solar array']
+[2025-12-02 18:20:22]    Confidence Threshold: 0.3
+[2025-12-02 18:20:22]    IoU Threshold: 0.7
+[2025-12-02 18:20:22]    Min Mask Area: 25 pixels
+[2025-12-02 18:20:22] 🤖 Initializing FastSAM Model...
+[2025-12-02 18:20:22]    PyTorch Version: 2.5.1+cu121
+[2025-12-02 18:20:22]    CUDA Available: True
+[2025-12-02 18:20:22]    CUDA Device: NVIDIA GeForce RTX 4070 Laptop GPU
+[2025-12-02 18:20:22] ✅ FastSAM model loaded successfully!
+[2025-12-02 18:20:22]    Model will be auto-downloaded on first run if needed
+[2025-12-02 18:20:22] 
+📊 Loading dataset from D:\Projects\Solar Detection\Data Analytics\EI_train_data(Sheet1).csv
+[2025-12-02 18:20:22] ✅ Loaded dataset: 3000 records with coordinates
+[2025-12-02 18:20:22] 
+⚠️  TEST MODE: Processing only 10 images
+[2025-12-02 18:20:22] 
+📁 Found 10 images to process
+[2025-12-02 18:20:22]    Input: D:\Projects\Solar Detection\Data Analytics\Google_MapStaticAPI\images
+[2025-12-02 18:20:22]    Output: D:\Projects\Solar Detection\SAM_Zero_Count\FastSAM\output
+
+[2025-12-02 18:20:22] ================================================================================
+[2025-12-02 18:20:22] Starting detection...
+[2025-12-02 18:20:22] ================================================================================
+[2025-12-02 18:20:22]    🔍 Running FastSAM inference...
+[2025-12-02 18:20:22]       ✓ Found 32 segments
+[2025-12-02 18:20:22]    ✓ Detected 32 segments
+[2025-12-02 18:20:23] 
+📊 0960_1 Results:
+[2025-12-02 18:20:23]    Lat/Lon: (None, None)
+[2025-12-02 18:20:23]    Has Solar (detected): True
+[2025-12-02 18:20:23]    Has Solar (label): None
+[2025-12-02 18:20:23]    Panel Count: 31
+[2025-12-02 18:20:23]    Panel Arrays: 11
+[2025-12-02 18:20:23]    Total Area: 6454.98 m²
+[2025-12-02 18:20:23]    Capacity: 1290.996 kW
+[2025-12-02 18:20:23]    Confidence: 0.888
+[2025-12-02 18:20:23]    QC Status: high_confidence
+[2025-12-02 18:20:23]    QC Notes: high confidence: 0.89, 31 panels detected, large panel areas detected
+[2025-12-02 18:20:23]    🔍 Running FastSAM inference...
+[2025-12-02 18:20:23]       ✓ Found 40 segments
+[2025-12-02 18:20:23]    ✓ Detected 40 segments
+[2025-12-02 18:20:23] 
+📊 0988_1 Results:
+[2025-12-02 18:20:23]    Lat/Lon: (None, None)
+[2025-12-02 18:20:23]    Has Solar (detected): True
+[2025-12-02 18:20:23]    Has Solar (label): None
+[2025-12-02 18:20:23]    Panel Count: 37
+[2025-12-02 18:20:23]    Panel Arrays: 10
+[2025-12-02 18:20:23]    Total Area: 4235.81 m²
+[2025-12-02 18:20:23]    Capacity: 847.161 kW
+[2025-12-02 18:20:23]    Confidence: 0.894
+[2025-12-02 18:20:23]    QC Status: high_confidence
+[2025-12-02 18:20:23]    QC Notes: high confidence: 0.89, 37 panels detected, large panel areas detected
+[2025-12-02 18:20:23]    🔍 Running FastSAM inference...
+[2025-12-02 18:20:23]       ✓ Found 57 segments
+[2025-12-02 18:20:23]    ✓ Detected 57 segments
+[2025-12-02 18:20:23] 
+📊 1.0_1.0 Results:
+[2025-12-02 18:20:23]    Lat/Lon: (None, None)
+[2025-12-02 18:20:23]    Has Solar (detected): True
+[2025-12-02 18:20:23]    Has Solar (label): None
+[2025-12-02 18:20:23]    Panel Count: 55
+[2025-12-02 18:20:23]    Panel Arrays: 9
+[2025-12-02 18:20:23]    Total Area: 4428.09 m²
+[2025-12-02 18:20:23]    Capacity: 885.618 kW
+[2025-12-02 18:20:23]    Confidence: 0.926
+[2025-12-02 18:20:23]    QC Status: high_confidence
+[2025-12-02 18:20:23]    QC Notes: high confidence: 0.93, 55 panels detected, large panel areas detected
+[2025-12-02 18:20:23]    🔍 Running FastSAM inference...
+[2025-12-02 18:20:24]       ✓ Found 73 segments
+[2025-12-02 18:20:24]    ✓ Detected 73 segments
+[2025-12-02 18:20:24] 
+📊 10.0_1.0 Results:
+[2025-12-02 18:20:24]    Lat/Lon: (None, None)
+[2025-12-02 18:20:24]    Has Solar (detected): True
+[2025-12-02 18:20:24]    Has Solar (label): None
+[2025-12-02 18:20:24]    Panel Count: 68
+[2025-12-02 18:20:24]    Panel Arrays: 2
+[2025-12-02 18:20:24]    Total Area: 6038.64 m²
+[2025-12-02 18:20:24]    Capacity: 1207.728 kW
+[2025-12-02 18:20:24]    Confidence: 0.943
+[2025-12-02 18:20:24]    QC Status: high_confidence
+[2025-12-02 18:20:24]    QC Notes: high confidence: 0.94, 68 panels detected, large panel areas detected
+[2025-12-02 18:20:24]    🔍 Running FastSAM inference...
+[2025-12-02 18:20:24]       ✓ Found 24 segments
+[2025-12-02 18:20:24]    ✓ Detected 24 segments
+[2025-12-02 18:20:24] 
+📊 100.0_1.0 Results:
+[2025-12-02 18:20:24]    Lat/Lon: (None, None)
+[2025-12-02 18:20:24]    Has Solar (detected): True
+[2025-12-02 18:20:24]    Has Solar (label): None
+[2025-12-02 18:20:24]    Panel Count: 23
+[2025-12-02 18:20:24]    Panel Arrays: 10
+[2025-12-02 18:20:24]    Total Area: 2597.69 m²
+[2025-12-02 18:20:24]    Capacity: 519.538 kW
+[2025-12-02 18:20:24]    Confidence: 0.859
+[2025-12-02 18:20:24]    QC Status: high_confidence
+[2025-12-02 18:20:24]    QC Notes: high confidence: 0.86, 23 panels detected, large panel areas detected
+[2025-12-02 18:20:24]    🔍 Running FastSAM inference...
+[2025-12-02 18:20:24]       ✓ Found 32 segments
+[2025-12-02 18:20:24]    ✓ Detected 32 segments
+[2025-12-02 18:20:24] 
+📊 1000.0_1.0 Results:
+[2025-12-02 18:20:24]    Lat/Lon: (None, None)
+[2025-12-02 18:20:24]    Has Solar (detected): True
+[2025-12-02 18:20:24]    Has Solar (label): None
+[2025-12-02 18:20:24]    Panel Count: 31
+[2025-12-02 18:20:24]    Panel Arrays: 11
+[2025-12-02 18:20:24]    Total Area: 14148.54 m²
+[2025-12-02 18:20:24]    Capacity: 2829.708 kW
+[2025-12-02 18:20:24]    Confidence: 0.921
+[2025-12-02 18:20:24]    QC Status: high_confidence
+[2025-12-02 18:20:24]    QC Notes: high confidence: 0.92, 31 panels detected, large panel areas detected
+[2025-12-02 18:20:24]    🔍 Running FastSAM inference...
+[2025-12-02 18:20:24]       ✓ Found 46 segments
+[2025-12-02 18:20:24]    ✓ Detected 46 segments
+[2025-12-02 18:20:25] 
+📊 1001.0_1.0 Results:
+[2025-12-02 18:20:25]    Lat/Lon: (None, None)
+[2025-12-02 18:20:25]    Has Solar (detected): True
+[2025-12-02 18:20:25]    Has Solar (label): None
+[2025-12-02 18:20:25]    Panel Count: 44
+[2025-12-02 18:20:25]    Panel Arrays: 9
+[2025-12-02 18:20:25]    Total Area: 2642.83 m²
+[2025-12-02 18:20:25]    Capacity: 528.566 kW
+[2025-12-02 18:20:25]    Confidence: 0.977
+[2025-12-02 18:20:25]    QC Status: high_confidence
+[2025-12-02 18:20:25]    QC Notes: high confidence: 0.98, 44 panels detected, large panel areas detected
+[2025-12-02 18:20:25]    🔍 Running FastSAM inference...
+[2025-12-02 18:20:25]       ✓ Found 24 segments
+[2025-12-02 18:20:25]    ✓ Detected 24 segments
+[2025-12-02 18:20:25] 
+📊 1002.0_1.0 Results:
+[2025-12-02 18:20:25]    Lat/Lon: (None, None)
+[2025-12-02 18:20:25]    Has Solar (detected): True
+[2025-12-02 18:20:25]    Has Solar (label): None
+[2025-12-02 18:20:25]    Panel Count: 22
+[2025-12-02 18:20:25]    Panel Arrays: 11
+[2025-12-02 18:20:25]    Total Area: 10306.57 m²
+[2025-12-02 18:20:25]    Capacity: 2061.315 kW
+[2025-12-02 18:20:25]    Confidence: 0.915
+[2025-12-02 18:20:25]    QC Status: high_confidence
+[2025-12-02 18:20:25]    QC Notes: high confidence: 0.91, 22 panels detected, large panel areas detected
+[2025-12-02 18:20:25]    🔍 Running FastSAM inference...
+[2025-12-02 18:20:25]       ✓ Found 49 segments
+[2025-12-02 18:20:25]    ✓ Detected 49 segments
+[2025-12-02 18:20:25] 
+📊 1003.0_1.0 Results:
+[2025-12-02 18:20:25]    Lat/Lon: (None, None)
+[2025-12-02 18:20:25]    Has Solar (detected): True
+[2025-12-02 18:20:25]    Has Solar (label): None
+[2025-12-02 18:20:25]    Panel Count: 49
+[2025-12-02 18:20:25]    Panel Arrays: 5
+[2025-12-02 18:20:25]    Total Area: 1611.31 m²
+[2025-12-02 18:20:25]    Capacity: 322.263 kW
+[2025-12-02 18:20:25]    Confidence: 0.921
+[2025-12-02 18:20:25]    QC Status: high_confidence
+[2025-12-02 18:20:25]    QC Notes: high confidence: 0.92, 49 panels detected, large panel areas detected
+[2025-12-02 18:20:25]    🔍 Running FastSAM inference...
+[2025-12-02 18:20:25]       ✓ Found 11 segments
+[2025-12-02 18:20:25]    ✓ Detected 11 segments
+[2025-12-02 18:20:25] 
+📊 1004.0_1.0 Results:
+[2025-12-02 18:20:25]    Lat/Lon: (None, None)
+[2025-12-02 18:20:25]    Has Solar (detected): True
+[2025-12-02 18:20:25]    Has Solar (label): None
+[2025-12-02 18:20:25]    Panel Count: 11
+[2025-12-02 18:20:25]    Panel Arrays: 8
+[2025-12-02 18:20:25]    Total Area: 2906.46 m²
+[2025-12-02 18:20:25]    Capacity: 581.292 kW
+[2025-12-02 18:20:25]    Confidence: 0.845
+[2025-12-02 18:20:25]    QC Status: high_confidence
+[2025-12-02 18:20:25]    QC Notes: high confidence: 0.85, 11 panels detected, large panel areas detected
+[2025-12-02 18:20:26] 
+✅ Saved results to D:\Projects\Solar Detection\SAM_Zero_Count\FastSAM\output\detection_results.csv
+[2025-12-02 18:20:26] 
+================================================================================
+[2025-12-02 18:20:26] ✅ DETECTION COMPLETE
+[2025-12-02 18:20:26] ================================================================================
+[2025-12-02 18:20:26] 📊 Statistics:
+[2025-12-02 18:20:26]    Total Processed: 10
+[2025-12-02 18:20:26]    With Solar: 10
+[2025-12-02 18:20:26]    Without Solar: 0
+[2025-12-02 18:20:26]    Errors: 0
+[2025-12-02 18:20:26]    Detection Rate: 100.0%
+[2025-12-02 18:20:26] 
+📁 Output files:
+[2025-12-02 18:20:26]    Results CSV: D:\Projects\Solar Detection\SAM_Zero_Count\FastSAM\output\detection_results.csv
+[2025-12-02 18:20:26]    JSON Records: D:\Projects\Solar Detection\SAM_Zero_Count\FastSAM\output\json_records (10 files)
+[2025-12-02 18:20:26]    Visualizations: D:\Projects\Solar Detection\SAM_Zero_Count\FastSAM\output\visualizations (10 files)
+[2025-12-02 18:20:26] ================================================================================
+[2025-12-02 18:20:26] 
+✅ PROGRAM COMPLETED SUCCESSFULLY
+[2025-12-02 18:20:26] 📄 Log file saved to: D:\Projects\Solar Detection\SAM_Zero_Count\FastSAM\detection_log_fastsam.txt

@@ -1,0 +1,279 @@
+================================================================================
+SAM Solar Panel Detection Log
+Session started: 2025-12-02 16:27:51
+================================================================================
+
+[2025-12-02 16:27:51] 🛰️  SAM SOLAR PANEL DETECTOR
+[2025-12-02 16:27:51] ================================================================================
+[2025-12-02 16:27:51] 📅 Date: 2025-12-02 16:27:51
+[2025-12-02 16:27:51] 🎯 Project: Solar Classification Dataset
+[2025-12-02 16:27:51] ================================================================================
+[2025-12-02 16:27:51] 
+📂 Configuration:
+[2025-12-02 16:27:51]    Image Directory: D:\Projects\Solar Detection\Data Analytics\Google_MapStaticAPI\images
+[2025-12-02 16:27:51]    Output Directory: D:\Projects\Solar Detection\SAM_Zero_Count\output
+[2025-12-02 16:27:51]    Pixel Resolution: 0.15m/pixel
+[2025-12-02 16:27:51]    Panel Efficiency: 0.2 kW/m²
+[2025-12-02 16:27:51]    Text Prompts: ['solar panel', 'solar panels', 'photovoltaic panel', 'rooftop solar']
+[2025-12-02 16:27:51]    Min Mask Area: 25 pixels
+[2025-12-02 16:27:51]    Confidence Threshold: 0.15
+[2025-12-02 16:27:51]    Zero-Shot Counting: ENABLED
+[2025-12-02 16:27:51]    Count Merge Threshold: 0.5
+[2025-12-02 16:27:51]    Scipy Available: True
+[2025-12-02 16:27:51] 
+📂 Configuration:
+[2025-12-02 16:27:51]    Image Directory: D:\Projects\Solar Detection\Data Analytics\Google_MapStaticAPI\images
+[2025-12-02 16:27:51]    Output Directory: D:\Projects\Solar Detection\SAM_Zero_Count\output
+[2025-12-02 16:27:51]    Pixel Resolution: 0.15m/pixel
+[2025-12-02 16:27:51]    Panel Efficiency: 0.2 kW/m²
+[2025-12-02 16:27:51]    Text Prompts: ['solar panel', 'solar panels', 'photovoltaic panel', 'rooftop solar']
+[2025-12-02 16:27:51]    Min Mask Area: 25 pixels
+[2025-12-02 16:27:51]    Confidence Threshold: 0.15
+[2025-12-02 16:27:51] 
+🤖 Initializing SAM Model...
+[2025-12-02 16:27:51]    PyTorch Version: 2.5.1+cu121
+[2025-12-02 16:27:51]    CUDA Available: True
+[2025-12-02 16:27:51]    CUDA Device: NVIDIA GeForce RTX 4070 Laptop GPU
+[2025-12-02 16:27:57] ✅ Lang-SAM model loaded successfully!
+[2025-12-02 16:27:57] 
+📊 Loaded dataset: 3000 records with coordinates
+[2025-12-02 16:27:57] 
+⚠️  TEST MODE: Processing only 10 images
+[2025-12-02 16:27:57] 
+📁 Found 10 images to process
+[2025-12-02 16:27:57]    Input: D:\Projects\Solar Detection\Data Analytics\Google_MapStaticAPI\images
+[2025-12-02 16:27:57]    Output: D:\Projects\Solar Detection\SAM_Zero_Count\output
+
+[2025-12-02 16:27:57] ================================================================================
+[2025-12-02 16:27:57] Starting detection...
+[2025-12-02 16:27:57] ================================================================================
+[2025-12-02 16:27:57]    🔍 SAM tensor error logged
+[2025-12-02 16:27:57]    ❌ Detection failed: The expanded size of the tensor (44) must match the existing size (4) at non-sin
+[2025-12-02 16:27:57]    🔍 SAM tensor error logged
+[2025-12-02 16:27:57]    ❌ Detection failed: The expanded size of the tensor (48) must match the existing size (4) at non-sin
+[2025-12-02 16:27:57]    🔍 SAM tensor error logged
+[2025-12-02 16:27:57]    ❌ Detection failed: The expanded size of the tensor (72) must match the existing size (4) at non-sin
+[2025-12-02 16:27:57]    🔍 SAM tensor error logged
+[2025-12-02 16:27:57]    ❌ Detection failed: The expanded size of the tensor (52) must match the existing size (4) at non-sin
+[2025-12-02 16:27:57]    ⚠️  No detections from any prompt
+[2025-12-02 16:27:57] 
+📊 0960_1 Results:
+[2025-12-02 16:27:57]    Lat/Lon: (21.19893413, 72.7971709)
+[2025-12-02 16:27:57]    Has Solar (detected): False
+[2025-12-02 16:27:57]    Has Solar (label): 1
+[2025-12-02 16:27:57]    Panel Count: 0
+[2025-12-02 16:27:57]    Panel Arrays: 0
+[2025-12-02 16:27:57]    Total Area: 0.00 m²
+[2025-12-02 16:27:57]    Capacity: 0.000 kW
+[2025-12-02 16:27:57]    Confidence: 0.000
+[2025-12-02 16:27:57]    QC Status: no_detection
+[2025-12-02 16:27:57]    QC Notes: no solar panels detected
+[2025-12-02 16:27:57]    🔍 SAM tensor error logged
+[2025-12-02 16:27:57]    ❌ Detection failed: The expanded size of the tensor (44) must match the existing size (4) at non-sin
+[2025-12-02 16:27:58]    🔍 SAM tensor error logged
+[2025-12-02 16:27:58]    ❌ Detection failed: The expanded size of the tensor (48) must match the existing size (4) at non-sin
+[2025-12-02 16:27:58]    🔍 SAM tensor error logged
+[2025-12-02 16:27:58]    ❌ Detection failed: The expanded size of the tensor (72) must match the existing size (4) at non-sin
+[2025-12-02 16:27:58]    🔍 SAM tensor error logged
+[2025-12-02 16:27:58]    ❌ Detection failed: The expanded size of the tensor (52) must match the existing size (4) at non-sin
+[2025-12-02 16:27:58]    ⚠️  No detections from any prompt
+[2025-12-02 16:27:58] 
+📊 0988_1 Results:
+[2025-12-02 16:27:58]    Lat/Lon: (21.20093372, 72.86311143)
+[2025-12-02 16:27:58]    Has Solar (detected): False
+[2025-12-02 16:27:58]    Has Solar (label): 1
+[2025-12-02 16:27:58]    Panel Count: 0
+[2025-12-02 16:27:58]    Panel Arrays: 0
+[2025-12-02 16:27:58]    Total Area: 0.00 m²
+[2025-12-02 16:27:58]    Capacity: 0.000 kW
+[2025-12-02 16:27:58]    Confidence: 0.000
+[2025-12-02 16:27:58]    QC Status: no_detection
+[2025-12-02 16:27:58]    QC Notes: no solar panels detected
+[2025-12-02 16:27:58]    🔍 SAM tensor error logged
+[2025-12-02 16:27:58]    ❌ Detection failed: The expanded size of the tensor (44) must match the existing size (4) at non-sin
+[2025-12-02 16:27:58]    🔍 SAM tensor error logged
+[2025-12-02 16:27:58]    ❌ Detection failed: The expanded size of the tensor (48) must match the existing size (4) at non-sin
+[2025-12-02 16:27:58]    🔍 SAM tensor error logged
+[2025-12-02 16:27:58]    ❌ Detection failed: The expanded size of the tensor (72) must match the existing size (4) at non-sin
+[2025-12-02 16:27:58]    🔍 SAM tensor error logged
+[2025-12-02 16:27:58]    ❌ Detection failed: The expanded size of the tensor (52) must match the existing size (4) at non-sin
+[2025-12-02 16:27:58]    ⚠️  No detections from any prompt
+[2025-12-02 16:27:58] 
+📊 1.0_1.0 Results:
+[2025-12-02 16:27:58]    Lat/Lon: (None, None)
+[2025-12-02 16:27:58]    Has Solar (detected): False
+[2025-12-02 16:27:58]    Has Solar (label): None
+[2025-12-02 16:27:58]    Panel Count: 0
+[2025-12-02 16:27:58]    Panel Arrays: 0
+[2025-12-02 16:27:58]    Total Area: 0.00 m²
+[2025-12-02 16:27:58]    Capacity: 0.000 kW
+[2025-12-02 16:27:58]    Confidence: 0.000
+[2025-12-02 16:27:58]    QC Status: no_detection
+[2025-12-02 16:27:58]    QC Notes: no solar panels detected
+[2025-12-02 16:27:58]    🔍 SAM tensor error logged
+[2025-12-02 16:27:58]    ❌ Detection failed: The expanded size of the tensor (44) must match the existing size (4) at non-sin
+[2025-12-02 16:27:59]    🔍 SAM tensor error logged
+[2025-12-02 16:27:59]    ❌ Detection failed: The expanded size of the tensor (48) must match the existing size (4) at non-sin
+[2025-12-02 16:27:59]    🔍 SAM tensor error logged
+[2025-12-02 16:27:59]    ❌ Detection failed: The expanded size of the tensor (72) must match the existing size (4) at non-sin
+[2025-12-02 16:27:59]    🔍 SAM tensor error logged
+[2025-12-02 16:27:59]    ❌ Detection failed: The expanded size of the tensor (52) must match the existing size (4) at non-sin
+[2025-12-02 16:27:59]    ⚠️  No detections from any prompt
+[2025-12-02 16:27:59] 
+📊 10.0_1.0 Results:
+[2025-12-02 16:27:59]    Lat/Lon: (None, None)
+[2025-12-02 16:27:59]    Has Solar (detected): False
+[2025-12-02 16:27:59]    Has Solar (label): None
+[2025-12-02 16:27:59]    Panel Count: 0
+[2025-12-02 16:27:59]    Panel Arrays: 0
+[2025-12-02 16:27:59]    Total Area: 0.00 m²
+[2025-12-02 16:27:59]    Capacity: 0.000 kW
+[2025-12-02 16:27:59]    Confidence: 0.000
+[2025-12-02 16:27:59]    QC Status: no_detection
+[2025-12-02 16:27:59]    QC Notes: no solar panels detected
+[2025-12-02 16:27:59]    🔍 SAM tensor error logged
+[2025-12-02 16:27:59]    ❌ Detection failed: The expanded size of the tensor (44) must match the existing size (4) at non-sin
+[2025-12-02 16:27:59]    🔍 SAM tensor error logged
+[2025-12-02 16:27:59]    ❌ Detection failed: The expanded size of the tensor (48) must match the existing size (4) at non-sin
+[2025-12-02 16:27:59]    🔍 SAM tensor error logged
+[2025-12-02 16:27:59]    ❌ Detection failed: The expanded size of the tensor (72) must match the existing size (4) at non-sin
+[2025-12-02 16:27:59]    🔍 SAM tensor error logged
+[2025-12-02 16:27:59]    ❌ Detection failed: The expanded size of the tensor (52) must match the existing size (4) at non-sin
+[2025-12-02 16:27:59]    ⚠️  No detections from any prompt
+[2025-12-02 16:27:59] 
+📊 100.0_1.0 Results:
+[2025-12-02 16:27:59]    Lat/Lon: (None, None)
+[2025-12-02 16:27:59]    Has Solar (detected): False
+[2025-12-02 16:27:59]    Has Solar (label): None
+[2025-12-02 16:27:59]    Panel Count: 0
+[2025-12-02 16:27:59]    Panel Arrays: 0
+[2025-12-02 16:27:59]    Total Area: 0.00 m²
+[2025-12-02 16:27:59]    Capacity: 0.000 kW
+[2025-12-02 16:27:59]    Confidence: 0.000
+[2025-12-02 16:27:59]    QC Status: no_detection
+[2025-12-02 16:27:59]    QC Notes: no solar panels detected
+[2025-12-02 16:27:59]    🔍 SAM tensor error logged
+[2025-12-02 16:27:59]    ❌ Detection failed: The expanded size of the tensor (44) must match the existing size (4) at non-sin
+[2025-12-02 16:28:00]    🔍 SAM tensor error logged
+[2025-12-02 16:28:00]    ❌ Detection failed: The expanded size of the tensor (48) must match the existing size (4) at non-sin
+[2025-12-02 16:28:00]    🔍 SAM tensor error logged
+[2025-12-02 16:28:00]    ❌ Detection failed: The expanded size of the tensor (72) must match the existing size (4) at non-sin
+[2025-12-02 16:28:00]    🔍 SAM tensor error logged
+[2025-12-02 16:28:00]    ❌ Detection failed: The expanded size of the tensor (52) must match the existing size (4) at non-sin
+[2025-12-02 16:28:00]    ⚠️  No detections from any prompt
+[2025-12-02 16:28:00] 
+📊 1000.0_1.0 Results:
+[2025-12-02 16:28:00]    Lat/Lon: (None, None)
+[2025-12-02 16:28:00]    Has Solar (detected): False
+[2025-12-02 16:28:00]    Has Solar (label): None
+[2025-12-02 16:28:00]    Panel Count: 0
+[2025-12-02 16:28:00]    Panel Arrays: 0
+[2025-12-02 16:28:00]    Total Area: 0.00 m²
+[2025-12-02 16:28:00]    Capacity: 0.000 kW
+[2025-12-02 16:28:00]    Confidence: 0.000
+[2025-12-02 16:28:00]    QC Status: no_detection
+[2025-12-02 16:28:00]    QC Notes: no solar panels detected
+[2025-12-02 16:28:00]    🔍 SAM tensor error logged
+[2025-12-02 16:28:00]    ❌ Detection failed: The expanded size of the tensor (44) must match the existing size (4) at non-sin
+[2025-12-02 16:28:00]    🔍 SAM tensor error logged
+[2025-12-02 16:28:00]    ❌ Detection failed: The expanded size of the tensor (48) must match the existing size (4) at non-sin
+[2025-12-02 16:28:00]    🔍 SAM tensor error logged
+[2025-12-02 16:28:00]    ❌ Detection failed: The expanded size of the tensor (72) must match the existing size (4) at non-sin
+[2025-12-02 16:28:00]    🔍 SAM tensor error logged
+[2025-12-02 16:28:00]    ❌ Detection failed: The expanded size of the tensor (52) must match the existing size (4) at non-sin
+[2025-12-02 16:28:00]    ⚠️  No detections from any prompt
+[2025-12-02 16:28:00] 
+📊 1001.0_1.0 Results:
+[2025-12-02 16:28:00]    Lat/Lon: (None, None)
+[2025-12-02 16:28:00]    Has Solar (detected): False
+[2025-12-02 16:28:00]    Has Solar (label): None
+[2025-12-02 16:28:00]    Panel Count: 0
+[2025-12-02 16:28:00]    Panel Arrays: 0
+[2025-12-02 16:28:00]    Total Area: 0.00 m²
+[2025-12-02 16:28:00]    Capacity: 0.000 kW
+[2025-12-02 16:28:00]    Confidence: 0.000
+[2025-12-02 16:28:00]    QC Status: no_detection
+[2025-12-02 16:28:00]    QC Notes: no solar panels detected
+[2025-12-02 16:28:00]    🔍 SAM tensor error logged
+[2025-12-02 16:28:00]    ❌ Detection failed: The expanded size of the tensor (44) must match the existing size (4) at non-sin
+[2025-12-02 16:28:01]    🔍 SAM tensor error logged
+[2025-12-02 16:28:01]    ❌ Detection failed: The expanded size of the tensor (48) must match the existing size (4) at non-sin
+[2025-12-02 16:28:01]    🔍 SAM tensor error logged
+[2025-12-02 16:28:01]    ❌ Detection failed: The expanded size of the tensor (72) must match the existing size (4) at non-sin
+[2025-12-02 16:28:01]    🔍 SAM tensor error logged
+[2025-12-02 16:28:01]    ❌ Detection failed: The expanded size of the tensor (52) must match the existing size (4) at non-sin
+[2025-12-02 16:28:01]    ⚠️  No detections from any prompt
+[2025-12-02 16:28:01] 
+📊 1002.0_1.0 Results:
+[2025-12-02 16:28:01]    Lat/Lon: (None, None)
+[2025-12-02 16:28:01]    Has Solar (detected): False
+[2025-12-02 16:28:01]    Has Solar (label): None
+[2025-12-02 16:28:01]    Panel Count: 0
+[2025-12-02 16:28:01]    Panel Arrays: 0
+[2025-12-02 16:28:01]    Total Area: 0.00 m²
+[2025-12-02 16:28:01]    Capacity: 0.000 kW
+[2025-12-02 16:28:01]    Confidence: 0.000
+[2025-12-02 16:28:01]    QC Status: no_detection
+[2025-12-02 16:28:01]    QC Notes: no solar panels detected
+[2025-12-02 16:28:01]    🔍 SAM tensor error logged
+[2025-12-02 16:28:01]    ❌ Detection failed: The expanded size of the tensor (44) must match the existing size (4) at non-sin
+[2025-12-02 16:28:01]    🔍 SAM tensor error logged
+[2025-12-02 16:28:01]    ❌ Detection failed: The expanded size of the tensor (48) must match the existing size (4) at non-sin
+[2025-12-02 16:28:01]    🔍 SAM tensor error logged
+[2025-12-02 16:28:01]    ❌ Detection failed: The expanded size of the tensor (72) must match the existing size (4) at non-sin
+[2025-12-02 16:28:01]    🔍 SAM tensor error logged
+[2025-12-02 16:28:01]    ❌ Detection failed: The expanded size of the tensor (52) must match the existing size (4) at non-sin
+[2025-12-02 16:28:01]    ⚠️  No detections from any prompt
+[2025-12-02 16:28:01] 
+📊 1003.0_1.0 Results:
+[2025-12-02 16:28:01]    Lat/Lon: (None, None)
+[2025-12-02 16:28:01]    Has Solar (detected): False
+[2025-12-02 16:28:01]    Has Solar (label): None
+[2025-12-02 16:28:01]    Panel Count: 0
+[2025-12-02 16:28:01]    Panel Arrays: 0
+[2025-12-02 16:28:01]    Total Area: 0.00 m²
+[2025-12-02 16:28:01]    Capacity: 0.000 kW
+[2025-12-02 16:28:01]    Confidence: 0.000
+[2025-12-02 16:28:01]    QC Status: no_detection
+[2025-12-02 16:28:01]    QC Notes: no solar panels detected
+[2025-12-02 16:28:01]    🔍 SAM tensor error logged
+[2025-12-02 16:28:01]    ❌ Detection failed: The expanded size of the tensor (44) must match the existing size (4) at non-sin
+[2025-12-02 16:28:02]    🔍 SAM tensor error logged
+[2025-12-02 16:28:02]    ❌ Detection failed: The expanded size of the tensor (48) must match the existing size (4) at non-sin
+[2025-12-02 16:28:02]    🔍 SAM tensor error logged
+[2025-12-02 16:28:02]    ❌ Detection failed: The expanded size of the tensor (72) must match the existing size (4) at non-sin
+[2025-12-02 16:28:02]    🔍 SAM tensor error logged
+[2025-12-02 16:28:02]    ❌ Detection failed: The expanded size of the tensor (52) must match the existing size (4) at non-sin
+[2025-12-02 16:28:02]    ⚠️  No detections from any prompt
+[2025-12-02 16:28:02] 
+📊 1004.0_1.0 Results:
+[2025-12-02 16:28:02]    Lat/Lon: (None, None)
+[2025-12-02 16:28:02]    Has Solar (detected): False
+[2025-12-02 16:28:02]    Has Solar (label): None
+[2025-12-02 16:28:02]    Panel Count: 0
+[2025-12-02 16:28:02]    Panel Arrays: 0
+[2025-12-02 16:28:02]    Total Area: 0.00 m²
+[2025-12-02 16:28:02]    Capacity: 0.000 kW
+[2025-12-02 16:28:02]    Confidence: 0.000
+[2025-12-02 16:28:02]    QC Status: no_detection
+[2025-12-02 16:28:02]    QC Notes: no solar panels detected
+[2025-12-02 16:28:02] 
+================================================================================
+[2025-12-02 16:28:02] ✅ DETECTION COMPLETE
+[2025-12-02 16:28:02] ================================================================================
+[2025-12-02 16:28:02] 📊 Statistics:
+[2025-12-02 16:28:02]    Total Processed: 10
+[2025-12-02 16:28:02]    With Solar: 0
+[2025-12-02 16:28:02]    Without Solar: 10
+[2025-12-02 16:28:02]    Errors: 0
+[2025-12-02 16:28:02]    Detection Rate: 0.0%
+[2025-12-02 16:28:02] 
+📁 Output files:
+[2025-12-02 16:28:02]    Results CSV: D:\Projects\Solar Detection\SAM_Zero_Count\output\detection_results.csv
+[2025-12-02 16:28:02]    JSON Records: D:\Projects\Solar Detection\SAM_Zero_Count\output\json_records (10 files)
+[2025-12-02 16:28:02]    GeoJSON files: D:\Projects\Solar Detection\SAM_Zero_Count\output\geojson (0 files)
+[2025-12-02 16:28:02]    Visualizations: D:\Projects\Solar Detection\SAM_Zero_Count\output\visualizations (0 files)
+[2025-12-02 16:28:02] ================================================================================
+[2025-12-02 16:28:02] 
+✅ PROGRAM COMPLETED SUCCESSFULLY
+[2025-12-02 16:28:02] 📄 Log file saved to: D:\Projects\Solar Detection\SAM_Zero_Count\detection_log.txt

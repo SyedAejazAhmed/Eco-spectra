@@ -1,0 +1,405 @@
+================================================================================
+SAM MODEL ERROR LOG
+Session started: 2025-12-02 16:27:51
+================================================================================
+
+[2025-12-02 16:27:57]
+  Image: 0960_1.png
+  Prompt: solar panel
+  Error: Tensor dimension error: The expanded size of the tensor (44) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 44].  Tensor sizes: [44, 1, 4]
+
+[2025-12-02 16:27:57]
+  Image: 0960_1.png
+  Prompt: solar panel
+  Error: Detection error: The expanded size of the tensor (44) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 44].  Tensor sizes: [44, 1, 4]
+
+[2025-12-02 16:27:57]
+  Image: 0960_1.png
+  Prompt: solar panels
+  Error: Tensor dimension error: The expanded size of the tensor (48) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 48].  Tensor sizes: [48, 1, 4]
+
+[2025-12-02 16:27:57]
+  Image: 0960_1.png
+  Prompt: solar panels
+  Error: Detection error: The expanded size of the tensor (48) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 48].  Tensor sizes: [48, 1, 4]
+
+[2025-12-02 16:27:57]
+  Image: 0960_1.png
+  Prompt: photovoltaic panel
+  Error: Tensor dimension error: The expanded size of the tensor (72) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 72].  Tensor sizes: [72, 1, 4]
+
+[2025-12-02 16:27:57]
+  Image: 0960_1.png
+  Prompt: photovoltaic panel
+  Error: Detection error: The expanded size of the tensor (72) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 72].  Tensor sizes: [72, 1, 4]
+
+[2025-12-02 16:27:57]
+  Image: 0960_1.png
+  Prompt: rooftop solar
+  Error: Tensor dimension error: The expanded size of the tensor (52) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 52].  Tensor sizes: [52, 1, 4]
+
+[2025-12-02 16:27:57]
+  Image: 0960_1.png
+  Prompt: rooftop solar
+  Error: Detection error: The expanded size of the tensor (52) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 52].  Tensor sizes: [52, 1, 4]
+
+[2025-12-02 16:27:57]
+  Image: 0988_1.png
+  Prompt: solar panel
+  Error: Tensor dimension error: The expanded size of the tensor (44) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 44].  Tensor sizes: [44, 1, 4]
+
+[2025-12-02 16:27:57]
+  Image: 0988_1.png
+  Prompt: solar panel
+  Error: Detection error: The expanded size of the tensor (44) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 44].  Tensor sizes: [44, 1, 4]
+
+[2025-12-02 16:27:58]
+  Image: 0988_1.png
+  Prompt: solar panels
+  Error: Tensor dimension error: The expanded size of the tensor (48) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 48].  Tensor sizes: [48, 1, 4]
+
+[2025-12-02 16:27:58]
+  Image: 0988_1.png
+  Prompt: solar panels
+  Error: Detection error: The expanded size of the tensor (48) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 48].  Tensor sizes: [48, 1, 4]
+
+[2025-12-02 16:27:58]
+  Image: 0988_1.png
+  Prompt: photovoltaic panel
+  Error: Tensor dimension error: The expanded size of the tensor (72) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 72].  Tensor sizes: [72, 1, 4]
+
+[2025-12-02 16:27:58]
+  Image: 0988_1.png
+  Prompt: photovoltaic panel
+  Error: Detection error: The expanded size of the tensor (72) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 72].  Tensor sizes: [72, 1, 4]
+
+[2025-12-02 16:27:58]
+  Image: 0988_1.png
+  Prompt: rooftop solar
+  Error: Tensor dimension error: The expanded size of the tensor (52) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 52].  Tensor sizes: [52, 1, 4]
+
+[2025-12-02 16:27:58]
+  Image: 0988_1.png
+  Prompt: rooftop solar
+  Error: Detection error: The expanded size of the tensor (52) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 52].  Tensor sizes: [52, 1, 4]
+
+[2025-12-02 16:27:58]
+  Image: 1.0_1.0.png
+  Prompt: solar panel
+  Error: Tensor dimension error: The expanded size of the tensor (44) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 44].  Tensor sizes: [44, 1, 4]
+
+[2025-12-02 16:27:58]
+  Image: 1.0_1.0.png
+  Prompt: solar panel
+  Error: Detection error: The expanded size of the tensor (44) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 44].  Tensor sizes: [44, 1, 4]
+
+[2025-12-02 16:27:58]
+  Image: 1.0_1.0.png
+  Prompt: solar panels
+  Error: Tensor dimension error: The expanded size of the tensor (48) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 48].  Tensor sizes: [48, 1, 4]
+
+[2025-12-02 16:27:58]
+  Image: 1.0_1.0.png
+  Prompt: solar panels
+  Error: Detection error: The expanded size of the tensor (48) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 48].  Tensor sizes: [48, 1, 4]
+
+[2025-12-02 16:27:58]
+  Image: 1.0_1.0.png
+  Prompt: photovoltaic panel
+  Error: Tensor dimension error: The expanded size of the tensor (72) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 72].  Tensor sizes: [72, 1, 4]
+
+[2025-12-02 16:27:58]
+  Image: 1.0_1.0.png
+  Prompt: photovoltaic panel
+  Error: Detection error: The expanded size of the tensor (72) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 72].  Tensor sizes: [72, 1, 4]
+
+[2025-12-02 16:27:58]
+  Image: 1.0_1.0.png
+  Prompt: rooftop solar
+  Error: Tensor dimension error: The expanded size of the tensor (52) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 52].  Tensor sizes: [52, 1, 4]
+
+[2025-12-02 16:27:58]
+  Image: 1.0_1.0.png
+  Prompt: rooftop solar
+  Error: Detection error: The expanded size of the tensor (52) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 52].  Tensor sizes: [52, 1, 4]
+
+[2025-12-02 16:27:58]
+  Image: 10.0_1.0.png
+  Prompt: solar panel
+  Error: Tensor dimension error: The expanded size of the tensor (44) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 44].  Tensor sizes: [44, 1, 4]
+
+[2025-12-02 16:27:58]
+  Image: 10.0_1.0.png
+  Prompt: solar panel
+  Error: Detection error: The expanded size of the tensor (44) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 44].  Tensor sizes: [44, 1, 4]
+
+[2025-12-02 16:27:59]
+  Image: 10.0_1.0.png
+  Prompt: solar panels
+  Error: Tensor dimension error: The expanded size of the tensor (48) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 48].  Tensor sizes: [48, 1, 4]
+
+[2025-12-02 16:27:59]
+  Image: 10.0_1.0.png
+  Prompt: solar panels
+  Error: Detection error: The expanded size of the tensor (48) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 48].  Tensor sizes: [48, 1, 4]
+
+[2025-12-02 16:27:59]
+  Image: 10.0_1.0.png
+  Prompt: photovoltaic panel
+  Error: Tensor dimension error: The expanded size of the tensor (72) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 72].  Tensor sizes: [72, 1, 4]
+
+[2025-12-02 16:27:59]
+  Image: 10.0_1.0.png
+  Prompt: photovoltaic panel
+  Error: Detection error: The expanded size of the tensor (72) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 72].  Tensor sizes: [72, 1, 4]
+
+[2025-12-02 16:27:59]
+  Image: 10.0_1.0.png
+  Prompt: rooftop solar
+  Error: Tensor dimension error: The expanded size of the tensor (52) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 52].  Tensor sizes: [52, 1, 4]
+
+[2025-12-02 16:27:59]
+  Image: 10.0_1.0.png
+  Prompt: rooftop solar
+  Error: Detection error: The expanded size of the tensor (52) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 52].  Tensor sizes: [52, 1, 4]
+
+[2025-12-02 16:27:59]
+  Image: 100.0_1.0.png
+  Prompt: solar panel
+  Error: Tensor dimension error: The expanded size of the tensor (44) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 44].  Tensor sizes: [44, 1, 4]
+
+[2025-12-02 16:27:59]
+  Image: 100.0_1.0.png
+  Prompt: solar panel
+  Error: Detection error: The expanded size of the tensor (44) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 44].  Tensor sizes: [44, 1, 4]
+
+[2025-12-02 16:27:59]
+  Image: 100.0_1.0.png
+  Prompt: solar panels
+  Error: Tensor dimension error: The expanded size of the tensor (48) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 48].  Tensor sizes: [48, 1, 4]
+
+[2025-12-02 16:27:59]
+  Image: 100.0_1.0.png
+  Prompt: solar panels
+  Error: Detection error: The expanded size of the tensor (48) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 48].  Tensor sizes: [48, 1, 4]
+
+[2025-12-02 16:27:59]
+  Image: 100.0_1.0.png
+  Prompt: photovoltaic panel
+  Error: Tensor dimension error: The expanded size of the tensor (72) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 72].  Tensor sizes: [72, 1, 4]
+
+[2025-12-02 16:27:59]
+  Image: 100.0_1.0.png
+  Prompt: photovoltaic panel
+  Error: Detection error: The expanded size of the tensor (72) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 72].  Tensor sizes: [72, 1, 4]
+
+[2025-12-02 16:27:59]
+  Image: 100.0_1.0.png
+  Prompt: rooftop solar
+  Error: Tensor dimension error: The expanded size of the tensor (52) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 52].  Tensor sizes: [52, 1, 4]
+
+[2025-12-02 16:27:59]
+  Image: 100.0_1.0.png
+  Prompt: rooftop solar
+  Error: Detection error: The expanded size of the tensor (52) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 52].  Tensor sizes: [52, 1, 4]
+
+[2025-12-02 16:27:59]
+  Image: 1000.0_1.0.png
+  Prompt: solar panel
+  Error: Tensor dimension error: The expanded size of the tensor (44) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 44].  Tensor sizes: [44, 1, 4]
+
+[2025-12-02 16:27:59]
+  Image: 1000.0_1.0.png
+  Prompt: solar panel
+  Error: Detection error: The expanded size of the tensor (44) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 44].  Tensor sizes: [44, 1, 4]
+
+[2025-12-02 16:28:00]
+  Image: 1000.0_1.0.png
+  Prompt: solar panels
+  Error: Tensor dimension error: The expanded size of the tensor (48) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 48].  Tensor sizes: [48, 1, 4]
+
+[2025-12-02 16:28:00]
+  Image: 1000.0_1.0.png
+  Prompt: solar panels
+  Error: Detection error: The expanded size of the tensor (48) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 48].  Tensor sizes: [48, 1, 4]
+
+[2025-12-02 16:28:00]
+  Image: 1000.0_1.0.png
+  Prompt: photovoltaic panel
+  Error: Tensor dimension error: The expanded size of the tensor (72) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 72].  Tensor sizes: [72, 1, 4]
+
+[2025-12-02 16:28:00]
+  Image: 1000.0_1.0.png
+  Prompt: photovoltaic panel
+  Error: Detection error: The expanded size of the tensor (72) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 72].  Tensor sizes: [72, 1, 4]
+
+[2025-12-02 16:28:00]
+  Image: 1000.0_1.0.png
+  Prompt: rooftop solar
+  Error: Tensor dimension error: The expanded size of the tensor (52) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 52].  Tensor sizes: [52, 1, 4]
+
+[2025-12-02 16:28:00]
+  Image: 1000.0_1.0.png
+  Prompt: rooftop solar
+  Error: Detection error: The expanded size of the tensor (52) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 52].  Tensor sizes: [52, 1, 4]
+
+[2025-12-02 16:28:00]
+  Image: 1001.0_1.0.png
+  Prompt: solar panel
+  Error: Tensor dimension error: The expanded size of the tensor (44) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 44].  Tensor sizes: [44, 1, 4]
+
+[2025-12-02 16:28:00]
+  Image: 1001.0_1.0.png
+  Prompt: solar panel
+  Error: Detection error: The expanded size of the tensor (44) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 44].  Tensor sizes: [44, 1, 4]
+
+[2025-12-02 16:28:00]
+  Image: 1001.0_1.0.png
+  Prompt: solar panels
+  Error: Tensor dimension error: The expanded size of the tensor (48) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 48].  Tensor sizes: [48, 1, 4]
+
+[2025-12-02 16:28:00]
+  Image: 1001.0_1.0.png
+  Prompt: solar panels
+  Error: Detection error: The expanded size of the tensor (48) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 48].  Tensor sizes: [48, 1, 4]
+
+[2025-12-02 16:28:00]
+  Image: 1001.0_1.0.png
+  Prompt: photovoltaic panel
+  Error: Tensor dimension error: The expanded size of the tensor (72) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 72].  Tensor sizes: [72, 1, 4]
+
+[2025-12-02 16:28:00]
+  Image: 1001.0_1.0.png
+  Prompt: photovoltaic panel
+  Error: Detection error: The expanded size of the tensor (72) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 72].  Tensor sizes: [72, 1, 4]
+
+[2025-12-02 16:28:00]
+  Image: 1001.0_1.0.png
+  Prompt: rooftop solar
+  Error: Tensor dimension error: The expanded size of the tensor (52) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 52].  Tensor sizes: [52, 1, 4]
+
+[2025-12-02 16:28:00]
+  Image: 1001.0_1.0.png
+  Prompt: rooftop solar
+  Error: Detection error: The expanded size of the tensor (52) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 52].  Tensor sizes: [52, 1, 4]
+
+[2025-12-02 16:28:00]
+  Image: 1002.0_1.0.png
+  Prompt: solar panel
+  Error: Tensor dimension error: The expanded size of the tensor (44) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 44].  Tensor sizes: [44, 1, 4]
+
+[2025-12-02 16:28:00]
+  Image: 1002.0_1.0.png
+  Prompt: solar panel
+  Error: Detection error: The expanded size of the tensor (44) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 44].  Tensor sizes: [44, 1, 4]
+
+[2025-12-02 16:28:01]
+  Image: 1002.0_1.0.png
+  Prompt: solar panels
+  Error: Tensor dimension error: The expanded size of the tensor (48) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 48].  Tensor sizes: [48, 1, 4]
+
+[2025-12-02 16:28:01]
+  Image: 1002.0_1.0.png
+  Prompt: solar panels
+  Error: Detection error: The expanded size of the tensor (48) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 48].  Tensor sizes: [48, 1, 4]
+
+[2025-12-02 16:28:01]
+  Image: 1002.0_1.0.png
+  Prompt: photovoltaic panel
+  Error: Tensor dimension error: The expanded size of the tensor (72) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 72].  Tensor sizes: [72, 1, 4]
+
+[2025-12-02 16:28:01]
+  Image: 1002.0_1.0.png
+  Prompt: photovoltaic panel
+  Error: Detection error: The expanded size of the tensor (72) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 72].  Tensor sizes: [72, 1, 4]
+
+[2025-12-02 16:28:01]
+  Image: 1002.0_1.0.png
+  Prompt: rooftop solar
+  Error: Tensor dimension error: The expanded size of the tensor (52) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 52].  Tensor sizes: [52, 1, 4]
+
+[2025-12-02 16:28:01]
+  Image: 1002.0_1.0.png
+  Prompt: rooftop solar
+  Error: Detection error: The expanded size of the tensor (52) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 52].  Tensor sizes: [52, 1, 4]
+
+[2025-12-02 16:28:01]
+  Image: 1003.0_1.0.png
+  Prompt: solar panel
+  Error: Tensor dimension error: The expanded size of the tensor (44) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 44].  Tensor sizes: [44, 1, 4]
+
+[2025-12-02 16:28:01]
+  Image: 1003.0_1.0.png
+  Prompt: solar panel
+  Error: Detection error: The expanded size of the tensor (44) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 44].  Tensor sizes: [44, 1, 4]
+
+[2025-12-02 16:28:01]
+  Image: 1003.0_1.0.png
+  Prompt: solar panels
+  Error: Tensor dimension error: The expanded size of the tensor (48) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 48].  Tensor sizes: [48, 1, 4]
+
+[2025-12-02 16:28:01]
+  Image: 1003.0_1.0.png
+  Prompt: solar panels
+  Error: Detection error: The expanded size of the tensor (48) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 48].  Tensor sizes: [48, 1, 4]
+
+[2025-12-02 16:28:01]
+  Image: 1003.0_1.0.png
+  Prompt: photovoltaic panel
+  Error: Tensor dimension error: The expanded size of the tensor (72) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 72].  Tensor sizes: [72, 1, 4]
+
+[2025-12-02 16:28:01]
+  Image: 1003.0_1.0.png
+  Prompt: photovoltaic panel
+  Error: Detection error: The expanded size of the tensor (72) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 72].  Tensor sizes: [72, 1, 4]
+
+[2025-12-02 16:28:01]
+  Image: 1003.0_1.0.png
+  Prompt: rooftop solar
+  Error: Tensor dimension error: The expanded size of the tensor (52) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 52].  Tensor sizes: [52, 1, 4]
+
+[2025-12-02 16:28:01]
+  Image: 1003.0_1.0.png
+  Prompt: rooftop solar
+  Error: Detection error: The expanded size of the tensor (52) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 52].  Tensor sizes: [52, 1, 4]
+
+[2025-12-02 16:28:01]
+  Image: 1004.0_1.0.png
+  Prompt: solar panel
+  Error: Tensor dimension error: The expanded size of the tensor (44) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 44].  Tensor sizes: [44, 1, 4]
+
+[2025-12-02 16:28:01]
+  Image: 1004.0_1.0.png
+  Prompt: solar panel
+  Error: Detection error: The expanded size of the tensor (44) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 44].  Tensor sizes: [44, 1, 4]
+
+[2025-12-02 16:28:02]
+  Image: 1004.0_1.0.png
+  Prompt: solar panels
+  Error: Tensor dimension error: The expanded size of the tensor (48) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 48].  Tensor sizes: [48, 1, 4]
+
+[2025-12-02 16:28:02]
+  Image: 1004.0_1.0.png
+  Prompt: solar panels
+  Error: Detection error: The expanded size of the tensor (48) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 48].  Tensor sizes: [48, 1, 4]
+
+[2025-12-02 16:28:02]
+  Image: 1004.0_1.0.png
+  Prompt: photovoltaic panel
+  Error: Tensor dimension error: The expanded size of the tensor (72) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 72].  Tensor sizes: [72, 1, 4]
+
+[2025-12-02 16:28:02]
+  Image: 1004.0_1.0.png
+  Prompt: photovoltaic panel
+  Error: Detection error: The expanded size of the tensor (72) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 72].  Tensor sizes: [72, 1, 4]
+
+[2025-12-02 16:28:02]
+  Image: 1004.0_1.0.png
+  Prompt: rooftop solar
+  Error: Tensor dimension error: The expanded size of the tensor (52) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 52].  Tensor sizes: [52, 1, 4]
+
+[2025-12-02 16:28:02]
+  Image: 1004.0_1.0.png
+  Prompt: rooftop solar
+  Error: Detection error: The expanded size of the tensor (52) must match the existing size (4) at non-singleton dimension 2.  Target sizes: [4, 13294, 52].  Tensor sizes: [52, 1, 4]
+
