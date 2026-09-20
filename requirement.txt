@@ -1,3 +1,4 @@
+notebook 
 # Core data processing
 
 pandas>=2.0.0
