@@ -12,6 +12,16 @@ import pandas as pd
 from typing import List, Dict, Tuple
 
 
+def _normalize_rgb(image: np.ndarray) -> np.ndarray:
+    """Return an RGB image as float32 values in the [0, 1] range."""
+    image = np.asarray(image).astype(np.float32, copy=False)
+    if image.ndim != 3 or image.shape[2] != 3:
+        raise ValueError("RGB image must have shape (height, width, 3)")
+    if image.max(initial=0) > 1.0:
+        image = image / 255.0
+    return np.clip(image, 0.0, 1.0)
+
+
 class ShadowRegionExtractor:
     """
     Extract and analyze individual shadow regions from images.
@@ -51,6 +61,14 @@ class ShadowRegionExtractor:
         --------
         np.ndarray : Binary shadow mask (H x W)
         """
+        image = _normalize_rgb(image)
+        if nir_band is not None:
+            nir_band = np.asarray(nir_band).astype(np.float32, copy=False)
+            if nir_band.shape != image.shape[:2]:
+                raise ValueError("nir_band must match the image height and width")
+            if nir_band.max(initial=0) > 1.0:
+                nir_band = nir_band / 255.0
+
         # Compute visible brightness (ITU-R BT.709 weights)
         r = image[:, :, 0]
         g = image[:, :, 1]
@@ -334,6 +352,20 @@ class ShadowRegionExtractor:
         stats_text += "\n" + "=" * 50 + "\n"
         stats_text += f"\nArea Distribution:\n"
         areas = [r['area'] for r in shadow_regions]
+        if not areas:
+            stats_text += "  No regions passed the minimum-area filter.\n"
+            axes[1, 1].text(0.1, 0.95, stats_text,
+                            transform=axes[1, 1].transAxes,
+                            fontsize=10, fontfamily='monospace',
+                            verticalalignment='top')
+            plt.tight_layout()
+            if save_path:
+                plt.savefig(save_path, dpi=150, bbox_inches='tight')
+            if show_plot:
+                plt.show()
+            else:
+                plt.close()
+            return
         stats_text += f"  Mean:   {np.mean(areas):.0f} px\n"
         stats_text += f"  Median: {np.median(areas):.0f} px\n"
         stats_text += f"  Min:    {np.min(areas):.0f} px\n"

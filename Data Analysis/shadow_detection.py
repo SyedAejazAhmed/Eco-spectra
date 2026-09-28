@@ -10,6 +10,17 @@ from pathlib import Path
 from typing import Tuple, Dict
 
 
+def _normalize_rgb(image: np.ndarray) -> np.ndarray:
+    """Return an RGB image as float32 values in the [0, 1] range."""
+    image = np.asarray(image)
+    if image.ndim != 3 or image.shape[2] < 3:
+        raise ValueError("Image must have shape (height, width, 3+ bands)")
+    image = image.astype(np.float32, copy=False)
+    if image.max(initial=0) > 1.0:
+        image = image / 255.0
+    return np.clip(image, 0.0, 1.0)
+
+
 class ShadowDetector:
     """
     Shadow detection using visible brightness and NIR thresholds.
@@ -79,6 +90,7 @@ class ShadowDetector:
         --------
         dict : Shadow detection results
         """
+        image = _normalize_rgb(image)
         height, width = image.shape[:2]
         
         # Method 1: Visible brightness threshold
@@ -144,6 +156,9 @@ class ShadowDetector:
         --------
         dict : Shadow detection results
         """
+        image = _normalize_rgb(image)
+        if nir_idx >= image.shape[2]:
+            raise ValueError("nir_idx must refer to a band in the multispectral image")
         height, width = image.shape[:2]
         
         # Visible brightness
