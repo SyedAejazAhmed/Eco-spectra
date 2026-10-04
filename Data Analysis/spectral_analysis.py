@@ -752,3 +752,42 @@ def build_feature_stack(rgb, cfg: SpectralConfig = None, remove_shadows=True):
     ]).astype(np.float32)
 
     return feature_stack, shadow_mask, corrected_rgb
+
+def detect_shadow_local_contrast(rgb, window=25, k=0.6, min_area_px=25):
+    """
+    Local-contrast shadow detector — avoids the panel/shadow colour confound
+    in detect_shadow_ycbcr / detect_shadow_hsi_tsai (both flag "dark and
+    blue", which is also exactly how panels look).
+
+    True cast shadow is a LOCAL illumination drop: pixels dark relative to
+    their immediate neighbourhood, with a gradient/penumbra boundary nearby.
+    A panel array is uniformly dark/blue across its own extent, so it will
+    NOT look dark relative to itself locally, and its interior has no
+    nearby high-gradient edge (only its outer boundary does) - so this
+    detector should largely leave real panels alone.
+    """
+    gray = cv2.cvtColor(rgb, cv2.COLOR_RGB2GRAY).astype(np.float32)
+
+    local_mean = cv2.boxFilter(gray, ddepth=-1, ksize=(window, window))
+    local_sqmean = cv2.boxFilter(gray ** 2, ddepth=-1, ksize=(window, window))
+    local_std = np.sqrt(np.clip(local_sqmean - local_mean ** 2, 0, None)) + 1e-6
+
+    z_score = (local_mean - gray) / local_std
+    shadow_raw = (z_score > k).astype(np.uint8)
+
+    grad = cv2.Laplacian(gray, cv2.CV_32F, ksize=5)
+    grad_thresh = np.percentile(np.abs(grad), 80)
+    edge_kernel = np.ones((window, window), np.uint8)
+    edge_nearby = cv2.dilate((np.abs(grad) > grad_thresh).astype(np.uint8), edge_kernel)
+
+    shadow = np.logical_and(shadow_raw, edge_nearby).astype(np.uint8)
+
+    kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (3, 3))
+    shadow = cv2.morphologyEx(shadow, cv2.MORPH_OPEN, kernel)
+
+    num, labels, stats, _ = cv2.connectedComponentsWithStats(shadow, connectivity=8)
+    clean = np.zeros_like(shadow)
+    for i in range(1, num):
+        if stats[i, cv2.CC_STAT_AREA] >= min_area_px:
+            clean[labels == i] = 1
+    return clean

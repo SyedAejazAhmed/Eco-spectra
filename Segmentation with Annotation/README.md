@@ -13,6 +13,7 @@ This directory contains supervised semantic-segmentation experiments for detecti
 | **UNET++** | Nested U-Net with dense skip pathways that reduce the semantic gap between encoder and decoder features. |
 | **Proposed UNET++ + Spectral Analysis** | UNET++ post-trained with shadow-aware spectral preprocessing, a shadow-mask input channel, synthetic shadow augmentation, shadow-weighted BCE + Dice loss, and extended evaluation metrics. |
 | **Proposed UNET ++ with Solar Shadow Filters** | UNET++ trained with solar shadow filtering and evaluated with pixel-wise and connected-component instance metrics. |
+| **Proposed Attention UNET with Solar Shadow Filters** | Attention UNET trained with solar shadow filtering and evaluated with pixel-wise and connected-component instance metrics. |
 | **DFANET** | Lightweight feature-aggregation architecture designed to combine low-level detail with deeper semantic features. |
 | **SegFormer** | Transformer-based encoder with a lightweight decoder for multi-scale segmentation features. |
 
@@ -43,6 +44,7 @@ The summary CSV stores a model loss produced by the training objective. The tabl
 | SegFormer | 0.9709 | 0.8554 | 0.8385 | 0.8467 | 0.8467 | 0.7594 | 0.1533 |
 | UNET++ + post training Spectral Analysis | 0.9794 | 0.8138 | 0.7941 | 0.8038 | 0.7970 | 0.6720 | 0.2030 |
 | Proposed UNET ++ with Solar Shadow Filters | 0.9854 | 0.9197 | 0.9327 | 0.9261 | 0.9261 | 0.8695 | 0.0739 |
+| Proposed Attention UNET with Solar Shadow Filters | 0.9775 | 0.7852 | 0.7896 | 0.7874 | 0.7874 | 0.6493 | 0.2126 |
 
 ## Validation Metrics
 
@@ -57,6 +59,7 @@ The summary CSV stores a model loss produced by the training objective. The tabl
 | SegFormer | 0.9667 | 0.8402 | 0.8237 | 0.8317 | 0.8317 | 0.7409 | 0.1683 |
 | UNET++ + post training Spectral Analysis | **0.9775** | 0.7962 | 0.7654 | 0.7805 | 0.7690 | 0.6400 | 0.2310 |
 | Proposed UNET ++ with Solar Shadow Filters | 0.9742 | 0.8702 | 0.8788 | 0.8744 | 0.8744 | 0.7946 | 0.1256 |
+| Proposed Attention UNET with Solar Shadow Filters | 0.9761 | 0.7720 | 0.7712 | 0.7716 | 0.7716 | 0.6282 | 0.2284 |
 
 ## Test Metrics
 
@@ -71,6 +74,7 @@ The summary CSV stores a model loss produced by the training objective. The tabl
 | SegFormer | 0.9681 | 0.8439 | 0.8210 | 0.8320 | 0.8320 | 0.7415 | 0.1680 |
 | UNET++ + post training Spectral Analysis | **0.9800** | 0.8051 | 0.7866 | 0.7958 | 0.7883 | 0.6608 | 0.2117 |
 | Proposed UNET ++ with Solar Shadow Filters | 0.9752 | 0.8745 | 0.8722 | 0.8734 | 0.8734 | 0.7934 | 0.2066 |
+| Proposed Attention UNET with Solar Shadow Filters | 0.9776 | 0.7843 | 0.7884 | 0.7863 | 0.7863 | 0.6479 | 0.2137 |
 
 ### Best-Metric Summary
 
@@ -125,6 +129,38 @@ The post-training notebook is [UNET++/spectral_model.ipynb](UNET++/spectral_mode
 | `models/unet_best_spectral_v2.pth` | Best proposed-model checkpoint selected by validation IoU. |
 | `visualizations/` | Training curves and qualitative shadow-heavy test comparisons. |
 
+## Proposed Attention UNET With Solar Shadow Filters
+
+This is a separate Attention UNET experiment trained with solar shadow filtering. The values below are read from `Attention UNET with Shadow Filter/outputs/metrics/attention_unet_shadow_metrics.csv` and rounded to four decimal places. They do not match the similarly named values in the pasted comparison table; the attached CSV is the source of truth for this run.
+
+### Pixel Results
+
+| Split | Loss | Accuracy | Precision | Recall | F1 Score | Dice | IoU | Dice Loss |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Train | 0.3250 | 0.9775 | 0.7852 | 0.7896 | 0.7874 | 0.7874 | 0.6493 | 0.2126 |
+| Validation | 0.3524 | 0.9761 | 0.7720 | 0.7712 | 0.7716 | 0.7716 | 0.6282 | 0.2284 |
+| Test | 0.3306 | 0.9776 | 0.7843 | 0.7884 | 0.7863 | 0.7863 | 0.6479 | 0.2137 |
+
+### Instance and mAP Results
+
+| Split | Instance Precision | Instance Recall | Instance F1 | mAP@0.5 | mAP@[0.5:0.95] | Ground-Truth Instances | Predicted Instances |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Train | 0.7281 | 0.7798 | 0.7531 | 0.6864 | 0.3444 | 22,227 | 23,804 |
+| Validation | 0.7173 | 0.7737 | 0.7444 | 0.6740 | 0.3272 | 4,706 | 5,076 |
+| Test | 0.7300 | 0.7813 | 0.7548 | 0.6881 | 0.3422 | 4,540 | 4,859 |
+
+The model reaches its strongest pixel Dice on the training split (0.7874), while its strongest mAP@0.5 is on the test split (0.6881). The reported `loss` is the training objective, while the table's Dice Loss is calculated consistently as `1 - pixel_dice`.
+
+### Attention UNET Shadow-Filter Artifacts
+
+| Artifact | Purpose |
+|---|---|
+| `Attention UNET with Shadow Filter/model.ipynb` | Training and evaluation notebook. |
+| `Attention UNET with Shadow Filter/outputs/metrics/attention_unet_shadow_metrics.csv` | Train, validation, and test pixel, instance, and mAP metrics. |
+| `Attention UNET with Shadow Filter/outputs/metrics/training_history.csv` | Per-epoch training and validation history for 50 epochs. |
+| `Attention UNET with Shadow Filter/outputs/models/attention_unet_shadow_best.pth` | Best Attention UNET shadow-filter checkpoint. |
+| `Attention UNET with Shadow Filter/outputs/plots/` | Training curves and qualitative examples. |
+
 ## Training Wall Time
 
 The total wall time is the elapsed time reported by each notebook for the complete training loop. Models are listed in the order in which their training runs were recorded.
@@ -138,6 +174,8 @@ The total wall time is the elapsed time reported by each notebook for the comple
 | 5 | UNET++ | 4,461.6 s | 74.4 |
 | 6 | DFANET | 515.4 s | 8.6 |
 | 7 | SegFormer | 415.5 s | 6.9 |
+| 8 | Proposed UNET ++ with Solar Shadow Filters | 3,816.8 s | 63.6 |
+| 9 | Proposed Attention UNET with Solar Shadow Filters | approximately 3,050 s | approximately 50.8 |
 
 ## Model Introduction Timeline
 
