@@ -12,6 +12,7 @@ This directory contains supervised semantic-segmentation experiments for detecti
 | **Attention UNET** | U-Net with attention gates that suppress irrelevant background features and focus on panel regions. |
 | **UNET++** | Nested U-Net with dense skip pathways that reduce the semantic gap between encoder and decoder features. |
 | **Proposed UNET++ + Spectral Analysis** | UNET++ post-trained with shadow-aware spectral preprocessing, a shadow-mask input channel, synthetic shadow augmentation, shadow-weighted BCE + Dice loss, and extended evaluation metrics. |
+| **Proposed UNET ++ with Solar Shadow Filters** | UNET++ trained with solar shadow filtering and evaluated with pixel-wise and connected-component instance metrics. |
 | **DFANET** | Lightweight feature-aggregation architecture designed to combine low-level detail with deeper semantic features. |
 | **SegFormer** | Transformer-based encoder with a lightweight decoder for multi-scale segmentation features. |
 
@@ -40,7 +41,8 @@ The summary CSV stores a model loss produced by the training objective. The tabl
 | **UNET++** | **0.9910** | **0.9519** | **0.9559** | **0.9539** | **0.9539** | **0.9148** | **0.0461** |
 | DFANET | 0.9488 | 0.4744 | 0.5000 | 0.4869 | 0.4869 | 0.4744 | 0.5131 |
 | SegFormer | 0.9709 | 0.8554 | 0.8385 | 0.8467 | 0.8467 | 0.7594 | 0.1533 |
-| Proposed UNET++ + Spectral Analysis | 0.9794 | 0.8138 | 0.7941 | 0.8038 | 0.7970 | 0.6720 | 0.2030 |
+| UNET++ + post training Spectral Analysis | 0.9794 | 0.8138 | 0.7941 | 0.8038 | 0.7970 | 0.6720 | 0.2030 |
+| Proposed UNET ++ with Solar Shadow Filters | 0.9854 | 0.9197 | 0.9327 | 0.9261 | 0.9261 | 0.8695 | 0.0739 |
 
 ## Validation Metrics
 
@@ -53,7 +55,8 @@ The summary CSV stores a model loss produced by the training objective. The tabl
 | **UNET++** | **0.9768** | **0.8908** | 0.8771 | **0.8838** | **0.8838** | **0.8075** | **0.1162** |
 | DFANET | 0.9464 | 0.4732 | 0.5000 | 0.4862 | 0.4862 | 0.4732 | 0.5138 |
 | SegFormer | 0.9667 | 0.8402 | 0.8237 | 0.8317 | 0.8317 | 0.7409 | 0.1683 |
-| Proposed UNET++ + Spectral Analysis | **0.9775** | 0.7962 | 0.7654 | 0.7805 | 0.7690 | 0.6400 | 0.2310 |
+| UNET++ + post training Spectral Analysis | **0.9775** | 0.7962 | 0.7654 | 0.7805 | 0.7690 | 0.6400 | 0.2310 |
+| Proposed UNET ++ with Solar Shadow Filters | 0.9742 | 0.8702 | 0.8788 | 0.8744 | 0.8744 | 0.7946 | 0.1256 |
 
 ## Test Metrics
 
@@ -66,11 +69,12 @@ The summary CSV stores a model loss produced by the training objective. The tabl
 | **UNET++** | 0.9766 | **0.8881** | 0.8684 | 0.8780 | 0.8780 | 0.7997 | 0.1220 |
 | DFANET | 0.9482 | 0.4741 | 0.5000 | 0.4867 | 0.4867 | 0.4741 | 0.5133 |
 | SegFormer | 0.9681 | 0.8439 | 0.8210 | 0.8320 | 0.8320 | 0.7415 | 0.1680 |
-| Proposed UNET++ + Spectral Analysis | **0.9800** | 0.8051 | 0.7866 | 0.7958 | 0.7883 | 0.6608 | 0.2117 |
+| UNET++ + post training Spectral Analysis | **0.9800** | 0.8051 | 0.7866 | 0.7958 | 0.7883 | 0.6608 | 0.2117 |
+| Proposed UNET ++ with Solar Shadow Filters | 0.9752 | 0.8745 | 0.8722 | 0.8734 | 0.8734 | 0.7934 | 0.2066 |
 
 ### Best-Metric Summary
 
-The proposed UNET++ + Spectral Analysis model achieves the best **Accuracy** among all compared models on both the validation split (0.9775) and the test split (0.9800). The original UNET++ remains strongest on the other validation metrics, while Attention UNET and the original UNET++ lead several test metrics. No proposed-model value is the best training metric in the current comparison.
+The proposed UNET++ + Spectral Analysis model achieves the best **Accuracy** among all compared models on both the validation split (0.9775) and the test split (0.9800). The original UNET++ remains strongest on the other validation metrics, while Attention UNET and the original UNET++ lead several test metrics. No proposed-model value is the best training metric in the current comparison. The **Proposed UNET ++ with Solar Shadow Filters** run is included as a separate experiment, but its supplied pixel metrics do not exceed the existing best values in any split, so no values from that row are bolded.
 
 ## Proposed Model: UNET++ With Spectral Analysis
 
